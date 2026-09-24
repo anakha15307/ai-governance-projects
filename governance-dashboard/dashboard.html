@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Governance Dashboard</title>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --ink: #1c2530;
+  --muted: #66717f;
+  --line: #e3e8ef;
+  --accent: #1f5eff;
+  --red: #d64545;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+header.topbar {
+  background: #141c2b;
+  color: #fff;
+  padding: 28px 32px;
+}
+header.topbar h1 { margin: 0 0 6px; font-size: 24px; font-weight: 650; }
+header.topbar p { margin: 0; color: #a9b4c4; font-size: 13px; }
+main { max-width: 1080px; margin: 0 auto; padding: 28px 24px 64px; }
+section { margin-bottom: 34px; }
+h2.section-title { font-size: 17px; margin: 0 0 14px; font-weight: 650; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+}
+.card .value { font-size: 30px; font-weight: 700; line-height: 1.1; }
+.card .label { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.card.accent { border-top: 4px solid var(--accent); }
+.card.red    { border-top: 4px solid var(--red); }
+.card .value.red { color: var(--red); }
+.chart { display: grid; gap: 10px; }
+.chart-row { display: grid; grid-template-columns: 130px 1fr 60px; gap: 10px; align-items: center; font-size: 14px; }
+.bar-track { background: var(--line); border-radius: 6px; height: 22px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; }
+.chart-row .count { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 14px;
+        border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: #eef1f6; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+tr:last-child td { border-bottom: none; }
+tr.overdue td { background: #fdecec; color: #a31621; font-weight: 600; }
+tr.overdue td .due-flag { display: inline-block; background: var(--red); color: #fff;
+  font-size: 11px; font-weight: 700; border-radius: 4px; padding: 2px 7px; margin-left: 8px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 20px; padding: 3px 12px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; }
+.system { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 20px 22px; margin-bottom: 18px; }
+.system h3 { margin: 0 0 4px; font-size: 18px; display: inline-block; }
+.system .meta { color: var(--muted); font-size: 13px; margin: 8px 0 14px; }
+.system table { margin-top: 10px; }
+.system h4 { font-size: 14px; margin: 18px 0 8px; }
+.system .no-actions { color: var(--muted); font-size: 13px; font-style: italic; }
+.filters { margin-bottom: 16px; }
+.filters button {
+  border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 20px; padding: 7px 16px; margin-right: 8px; font-size: 13px; cursor: pointer;
+}
+.filters button.active { background: #141c2b; color: #fff; border-color: #141c2b; }
+.note { color: var(--muted); font-size: 13px; }
+footer { color: var(--muted); font-size: 12px; text-align: center; padding-bottom: 40px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <h1>AI Governance Dashboard</h1>
+  <p>Risk register snapshot as of 2026-09-24</p>
+</header>
+<main>
+<section><h2 class="section-title">Summary</h2><div class="cards">
+<div class="card"><div class="value">7</div><div class="label">AI systems tracked</div></div>
+<div class="card"><div class="value">4</div><div class="label">High-Risk systems</div></div>
+<div class="card"><div class="value">2</div><div class="label">Limited systems</div></div>
+<div class="card"><div class="value">1</div><div class="label">Minimal systems</div></div>
+<div class="card accent"><div class="value">54.5%</div><div class="label">Controls compliant (12/22)</div></div>
+<div class="card red"><div class="value red">4</div><div class="label">Overdue actions</div></div>
+</div></section>
+<section><h2 class="section-title">Controls by Status</h2><div class="chart">
+<div class="chart-row"><span>Compliant</span><div class="bar-track"><div class="bar-fill" style="width:54.5%;background:#1e8e4d"></div></div><span class="count">12 (54.5%)</span></div>
+<div class="chart-row"><span>Partial</span><div class="bar-track"><div class="bar-fill" style="width:27.3%;background:#d9910c"></div></div><span class="count">6 (27.3%)</span></div>
+<div class="chart-row"><span>Non-compliant</span><div class="bar-track"><div class="bar-fill" style="width:18.2%;background:#d64545"></div></div><span class="count">4 (18.2%)</span></div>
+</div></section>
+<section><h2 class="section-title">Open Actions (by due date)</h2>
+<table><thead><tr><th>System</th><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr class="overdue"><td>MedTriage</td><td>Schedule FDA pre-submission meeting</td><td>E. Fontaine</td><td>2026-08-28<span class="due-flag">OVERDUE</span></td><td>overdue</td></tr>
+<tr class="overdue"><td>DocuSummarize</td><td>Get employee use policy signed by all pilot users</td><td>C. Diaz</td><td>2026-09-01<span class="due-flag">OVERDUE</span></td><td>open</td></tr>
+<tr class="overdue"><td>HireScore</td><td>Publish explainability doc for candidate-facing FAQs</td><td>S. Adeyemi</td><td>2026-09-05<span class="due-flag">OVERDUE</span></td><td>open</td></tr>
+<tr class="overdue"><td>LoanAssist</td><td>Fix adverse-action notice template for denied applicants</td><td>J. Kim</td><td>2026-09-10<span class="due-flag">OVERDUE</span></td><td>open</td></tr>
+<tr><td>DocuSummarize</td><td>Enable content labeling for PDF exports</td><td>P. Rao</td><td>2026-09-30</td><td>in-progress</td></tr>
+<tr><td>LoanAssist</td><td>Complete conformity assessment for Q3 audit</td><td>L. Tran</td><td>2026-10-01</td><td>in-progress</td></tr>
+<tr><td>SupportPilot</td><td>Tune hallucination detector threshold below 2%</td><td>K. Osei</td><td>2026-10-20</td><td>in-progress</td></tr>
+<tr><td>MedTriage</td><td>Complete subgroup performance test</td><td>G. Mensah</td><td>2026-11-01</td><td>open</td></tr>
+<tr><td>HireScore</td><td>Finalize retention policy with Legal</td><td>D. Nguyen</td><td>2026-11-15</td><td>in-progress</td></tr>
+</tbody></table></section>
+<section><h2 class="section-title">Systems</h2><div class="filters"><button class="active" data-tier="All">All</button><button data-tier="High-Risk">High-Risk</button><button data-tier="Limited">Limited</button><button data-tier="Minimal">Minimal</button></div>
+<div class="system" data-tier="High-Risk"><h3>LoanAssist</h3> <span class="badge" style="background:#fde2e2;color:#a31621">High-Risk</span><div class="meta">Owner: Consumer Lending &nbsp;·&nbsp; Status: Production</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Pre-deployment bias audit</td><td>M. Okafor</td><td>2026-07-15</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>EU AI Act conformity assessment</td><td>L. Tran</td><td>2026-10-01</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+<tr><td>Human-in-the-loop for declines</td><td>R. Patel</td><td>2026-06-30</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Adverse-action notice automation</td><td>J. Kim</td><td>2026-09-10</td><td><span class="dot" style="background:#d64545"></span>Non-compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<table><thead><tr><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Complete conformity assessment for Q3 audit</td><td>L. Tran</td><td>2026-10-01</td><td>in-progress</td></tr>
+<tr class="overdue"><td>Fix adverse-action notice template for denied applicants</td><td>J. Kim</td><td>2026-09-10</td><td>open</td></tr>
+</tbody></table>
+</div>
+<div class="system" data-tier="High-Risk"><h3>HireScore</h3> <span class="badge" style="background:#fde2e2;color:#a31621">High-Risk</span><div class="meta">Owner: Talent Acquisition &nbsp;·&nbsp; Status: Pilot</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Four-fifths rule adverse-impact test</td><td>S. Adeyemi</td><td>2026-08-20</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Candidate data retention policy</td><td>D. Nguyen</td><td>2026-11-15</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+<tr><td>Explainability documentation</td><td>S. Adeyemi</td><td>2026-09-05</td><td><span class="dot" style="background:#d64545"></span>Non-compliant</td></tr>
+<tr><td>Annual third-party audit</td><td>D. Nguyen</td><td>2027-01-31</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<table><thead><tr><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr class="overdue"><td>Publish explainability doc for candidate-facing FAQs</td><td>S. Adeyemi</td><td>2026-09-05</td><td>open</td></tr>
+<tr><td>Finalize retention policy with Legal</td><td>D. Nguyen</td><td>2026-11-15</td><td>in-progress</td></tr>
+</tbody></table>
+</div>
+<div class="system" data-tier="High-Risk"><h3>FraudGuard</h3> <span class="badge" style="background:#fde2e2;color:#a31621">High-Risk</span><div class="meta">Owner: Risk &amp; Fraud &nbsp;·&nbsp; Status: Production</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Model drift monitoring</td><td>A. Rahman</td><td>2026-06-01</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>False-positive impact review</td><td>A. Rahman</td><td>2026-09-20</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Decision log retention (2 years)</td><td>T. Brooks</td><td>2026-12-31</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<p class="no-actions">No open actions.</p>
+</div>
+<div class="system" data-tier="Limited"><h3>SupportPilot</h3> <span class="badge" style="background:#fef3d8;color:#92600a">Limited</span><div class="meta">Owner: Customer Experience &nbsp;·&nbsp; Status: Production</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>AI disclosure in chat UI</td><td>N. Silva</td><td>2026-05-12</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Hallucination rate monitoring</td><td>K. Osei</td><td>2026-10-20</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+<tr><td>PII redaction in training data</td><td>N. Silva</td><td>2026-07-01</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<table><thead><tr><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Tune hallucination detector threshold below 2%</td><td>K. Osei</td><td>2026-10-20</td><td>in-progress</td></tr>
+</tbody></table>
+</div>
+<div class="system" data-tier="High-Risk"><h3>MedTriage</h3> <span class="badge" style="background:#fde2e2;color:#a31621">High-Risk</span><div class="meta">Owner: Health Solutions &nbsp;·&nbsp; Status: In Development</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Clinical validation study</td><td>E. Fontaine</td><td>2026-12-01</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+<tr><td>FDA pre-submission briefing</td><td>E. Fontaine</td><td>2026-08-28</td><td><span class="dot" style="background:#d64545"></span>Non-compliant</td></tr>
+<tr><td>Demographic subgroup performance test</td><td>G. Mensah</td><td>2026-11-01</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<table><thead><tr><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr class="overdue"><td>Schedule FDA pre-submission meeting</td><td>E. Fontaine</td><td>2026-08-28</td><td>overdue</td></tr>
+<tr><td>Complete subgroup performance test</td><td>G. Mensah</td><td>2026-11-01</td><td>open</td></tr>
+</tbody></table>
+</div>
+<div class="system" data-tier="Minimal"><h3>RecsEngine</h3> <span class="badge" style="background:#ddf3e4;color:#166b37">Minimal</span><div class="meta">Owner: Growth &nbsp;·&nbsp; Status: Production</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Recommendation transparency notice</td><td>H. Park</td><td>2026-04-15</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Quarterly output sampling review</td><td>H. Park</td><td>2026-10-15</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<p class="no-actions">No open actions.</p>
+</div>
+<div class="system" data-tier="Limited"><h3>DocuSummarize</h3> <span class="badge" style="background:#fef3d8;color:#92600a">Limited</span><div class="meta">Owner: Operations &nbsp;·&nbsp; Status: Pilot</div>
+<h4>Controls</h4>
+<table><thead><tr><th>Control</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr><td>AI-generated content labeling</td><td>P. Rao</td><td>2026-09-30</td><td><span class="dot" style="background:#d9910c"></span>Partial</td></tr>
+<tr><td>Source citation requirement</td><td>P. Rao</td><td>2026-06-18</td><td><span class="dot" style="background:#1e8e4d"></span>Compliant</td></tr>
+<tr><td>Employee use policy sign-off</td><td>C. Diaz</td><td>2026-09-01</td><td><span class="dot" style="background:#d64545"></span>Non-compliant</td></tr>
+</tbody></table>
+<h4>Open actions</h4>
+<table><thead><tr><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody>
+<tr class="overdue"><td>Get employee use policy signed by all pilot users</td><td>C. Diaz</td><td>2026-09-01</td><td>open</td></tr>
+<tr><td>Enable content labeling for PDF exports</td><td>P. Rao</td><td>2026-09-30</td><td>in-progress</td></tr>
+</tbody></table>
+</div>
+</section>
+</main>
+<footer>Generated by build.py from data/risk_register.json &mdash; static, offline-capable.</footer>
+<script>
+// Tiny inline behavior: filter the per-system cards by risk tier.
+(function () {
+  var buttons = document.querySelectorAll('.filters button');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var want = btn.getAttribute('data-tier');
+      document.querySelectorAll('.system').forEach(function (card) {
+        card.style.display =
+          (want === 'All' || card.getAttribute('data-tier') === want) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{"ts": "2026-09-24T21:58:51.971583+00:00", "output_id": "out-001", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.971928+00:00", "output_id": "out-002", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.972069+00:00", "output_id": "out-003", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.972175+00:00", "output_id": "out-004", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.972275+00:00", "output_id": "out-005", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T21:58:51.972388+00:00", "output_id": "out-006", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.972478+00:00", "output_id": "out-007", "source": "tool", "triggered": [{"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.972561+00:00", "output_id": "out-008", "source": "model", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.972638+00:00", "output_id": "out-009", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.972735+00:00", "output_id": "out-010", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.972807+00:00", "output_id": "out-011", "source": "model", "triggered": [{"policy_id": "PII-003", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.972882+00:00", "output_id": "out-012", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.972946+00:00", "output_id": "out-013", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.973037+00:00", "output_id": "out-014", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T21:58:51.973123+00:00", "output_id": "out-015", "source": "tool", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:51.973297+00:00", "output_id": "out-016", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.973394+00:00", "output_id": "out-017", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:51.973476+00:00", "output_id": "out-018", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}, {"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T21:58:52.073859+00:00", "output_id": "out-019", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T21:58:52.074181+00:00", "output_id": "out-020", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.777554+00:00", "output_id": "out-001", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.777796+00:00", "output_id": "out-002", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.777929+00:00", "output_id": "out-003", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.778045+00:00", "output_id": "out-004", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.778144+00:00", "output_id": "out-005", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T22:01:35.778247+00:00", "output_id": "out-006", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.778326+00:00", "output_id": "out-007", "source": "tool", "triggered": [{"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.778407+00:00", "output_id": "out-008", "source": "model", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.778486+00:00", "output_id": "out-009", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.778565+00:00", "output_id": "out-010", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.778641+00:00", "output_id": "out-011", "source": "model", "triggered": [{"policy_id": "PII-003", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.778735+00:00", "output_id": "out-012", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.778802+00:00", "output_id": "out-013", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.778895+00:00", "output_id": "out-014", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T22:01:35.778984+00:00", "output_id": "out-015", "source": "tool", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.779076+00:00", "output_id": "out-016", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.779159+00:00", "output_id": "out-017", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.779235+00:00", "output_id": "out-018", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}, {"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:01:35.879534+00:00", "output_id": "out-019", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:01:35.879862+00:00", "output_id": "out-020", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.529965+00:00", "output_id": "out-001", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.530198+00:00", "output_id": "out-002", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.530322+00:00", "output_id": "out-003", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.530423+00:00", "output_id": "out-004", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.530533+00:00", "output_id": "out-005", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T22:02:04.530638+00:00", "output_id": "out-006", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.530756+00:00", "output_id": "out-007", "source": "tool", "triggered": [{"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.530853+00:00", "output_id": "out-008", "source": "model", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.530931+00:00", "output_id": "out-009", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.531011+00:00", "output_id": "out-010", "source": "tool", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.531084+00:00", "output_id": "out-011", "source": "model", "triggered": [{"policy_id": "PII-003", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.531159+00:00", "output_id": "out-012", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.531230+00:00", "output_id": "out-013", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.531323+00:00", "output_id": "out-014", "source": "model", "triggered": [{"policy_id": "INJ-001", "severity": "medium", "evidence_count": 2}], "severity": "medium", "action": "escalated", "note": ""}
+{"ts": "2026-09-24T22:02:04.531400+00:00", "output_id": "out-015", "source": "tool", "triggered": [{"policy_id": "SEC-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.531487+00:00", "output_id": "out-016", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.531572+00:00", "output_id": "out-017", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.531661+00:00", "output_id": "out-018", "source": "model", "triggered": [{"policy_id": "PII-001", "severity": "high", "evidence_count": 1}, {"policy_id": "PII-002", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}
+{"ts": "2026-09-24T22:02:04.631994+00:00", "output_id": "out-019", "source": "model", "triggered": [], "severity": "low", "action": "passed", "note": ""}
+{"ts": "2026-09-24T22:02:04.632875+00:00", "output_id": "out-020", "source": "model", "triggered": [{"policy_id": "DIS-001", "severity": "high", "evidence_count": 1}], "severity": "high", "action": "blocked", "note": ""}

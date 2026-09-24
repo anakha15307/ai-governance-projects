@@ -1,0 +1,140 @@
+{
+  "models": {
+    "cv-screener@1.2": {
+      "name": "cv-screener",
+      "version": "1.2",
+      "owner": "Talent Platform",
+      "intended_use": "Screen CVs and rank applicants for initial recruiter review",
+      "risk_tier": "High-Risk",
+      "status": "approved",
+      "datasets": [
+        {
+          "dataset": "resume-corpus@2024.1",
+          "relation": "trained-on"
+        },
+        {
+          "dataset": "labeled-resumes@2024.3",
+          "relation": "fine-tuned-on"
+        }
+      ],
+      "approval_history": [
+        {
+          "action": "submit",
+          "actor": "Talent Platform",
+          "from": "draft",
+          "to": "in-review",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": "Ready for governance review ahead of Q4 hiring pilot."
+        },
+        {
+          "action": "approve",
+          "actor": "M. Okafor",
+          "from": "in-review",
+          "to": "approved",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": "Bias audit passed (audit-2026-004); human-in-the-loop retained."
+        }
+      ],
+      "created_at": "2026-09-24T22:02:04+00:00",
+      "updated_at": "2026-09-24T22:02:05+00:00"
+    },
+    "support-chatbot@2.0": {
+      "name": "support-chatbot",
+      "version": "2.0",
+      "owner": "Customer Experience",
+      "intended_use": "Draft replies to tier-1 support tickets for agent approval",
+      "risk_tier": "Limited",
+      "status": "approved",
+      "datasets": [
+        {
+          "dataset": "support-tickets@2025.1",
+          "relation": "fine-tuned-on"
+        }
+      ],
+      "approval_history": [
+        {
+          "action": "submit",
+          "actor": "Customer Experience",
+          "from": "draft",
+          "to": "in-review",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": null
+        },
+        {
+          "action": "approve",
+          "actor": "J. Lindqvist",
+          "from": "in-review",
+          "to": "approved",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": "Disclosure banner enabled per transparency duty."
+        }
+      ],
+      "created_at": "2026-09-24T22:02:05+00:00",
+      "updated_at": "2026-09-24T22:02:05+00:00"
+    },
+    "fraud-detector@0.9": {
+      "name": "fraud-detector",
+      "version": "0.9",
+      "owner": "Risk Engineering",
+      "intended_use": "Flag suspicious transactions for manual review",
+      "risk_tier": "High-Risk",
+      "status": "rejected",
+      "datasets": [
+        {
+          "dataset": "transaction-logs@2025.2",
+          "relation": "trained-on"
+        }
+      ],
+      "approval_history": [
+        {
+          "action": "submit",
+          "actor": "Risk Engineering",
+          "from": "draft",
+          "to": "in-review",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": null
+        },
+        {
+          "action": "reject",
+          "actor": "M. Okafor",
+          "from": "in-review",
+          "to": "rejected",
+          "timestamp": "2026-09-24T22:02:05+00:00",
+          "note": "False-positive rate 11% exceeds 5% tolerance; resubmit with threshold tuning."
+        }
+      ],
+      "created_at": "2026-09-24T22:02:05+00:00",
+      "updated_at": "2026-09-24T22:02:05+00:00"
+    }
+  },
+  "datasets": {
+    "resume-corpus@2024.1": {
+      "name": "resume-corpus",
+      "version": "2024.1",
+      "source": "Internal applicant portal exports",
+      "license": "Proprietary — internal use only",
+      "created_at": "2026-09-24T22:02:04+00:00"
+    },
+    "labeled-resumes@2024.3": {
+      "name": "labeled-resumes",
+      "version": "2024.3",
+      "source": "Third-party annotation vendor",
+      "license": "Commercial — DPA in place",
+      "created_at": "2026-09-24T22:02:04+00:00"
+    },
+    "support-tickets@2025.1": {
+      "name": "support-tickets",
+      "version": "2025.1",
+      "source": "Zendesk export",
+      "license": "Proprietary — internal use only",
+      "created_at": "2026-09-24T22:02:04+00:00"
+    },
+    "transaction-logs@2025.2": {
+      "name": "transaction-logs",
+      "version": "2025.2",
+      "source": "Core banking data warehouse",
+      "license": "Regulated — PCI-DSS scope",
+      "created_at": "2026-09-24T22:02:04+00:00"
+    }
+  }
+}

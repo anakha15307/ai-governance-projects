@@ -1,0 +1,132 @@
+EU AI ACT RISK CLASSIFIER -- DEMO
+----------------------------------------------------------------
+SYSTEM                               TIER
+----------------------------------------------------------------
+ToneCheck                            Prohibited
+ShopAssist                           Limited Risk
+HireLens CV Screener                 High-Risk
+StationWatch                         Prohibited
+MailGuard                            Minimal Risk
+CivicTrust Welfare Scoring           Prohibited
+----------------------------------------------------------------
+
+================================================================
+System: ToneCheck
+EU AI Act risk tier: PROHIBITED
+================================================================
+
+Matched categories:
+  * [Prohibited] Emotion inference in work or education (Art. 5(1)(g))
+      Inferring emotions of a natural person in work or education settings is a prohibited practice (medical/safety purposes excepted).
+
+Reviewer flags:
+  ! Borderline by design: the real provision has exceptions (e.g. medical or safety purposes). This simplified mapping treats all workplace/education emotion inference as prohibited -- get legal review before relying on this classification.
+
+Obligations checklist:
+  [ ] Do NOT place on the market, put into service, or use in the EU -- the practice is banned.
+  [ ] Decommission or redesign the system to remove the prohibited functionality.
+  [ ] Document the prohibition analysis and legal review trail.
+  [ ] Note: fines up to EUR 35M or 7% of worldwide annual turnover.
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
+================================================================
+System: ShopAssist
+EU AI Act risk tier: LIMITED RISK
+================================================================
+
+Matched categories:
+  * [Limited Risk] AI interaction / chatbot (Art. 50(1))
+      People interacting with the system must be informed they are interacting with AI. Transparency duties apply.
+
+Obligations checklist:
+  [ ] Inform users they are interacting with an AI system (Art. 50(1)).
+  [ ] Clearly label AI-generated or manipulated content (Art. 50(2),(4)).
+  [ ] Inform users when emotion recognition or biometric categorisation is in use (Art. 50(3)).
+  [ ] Make disclosures timely, clear and distinguishable.
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
+================================================================
+System: HireLens CV Screener
+EU AI Act risk tier: HIGH-RISK
+================================================================
+
+Matched categories:
+  * [High-Risk] Education and vocational training (Annex III, point 3)
+      AI determining access to education or evaluating learning outcomes is high-risk because it shapes a person's educational and professional trajectory.
+  * [High-Risk] Employment and workers management (Annex III, point 4)
+      AI used in recruitment, or in decisions affecting work-related relationships such as promotion, termination or task allocation, is high-risk.
+
+Obligations checklist:
+  [ ] Implement a risk management system (Art. 9).
+  [ ] Ensure data governance and quality of training/validation/test data (Art. 10).
+  [ ] Prepare technical documentation and keep automatically generated logs (Art. 11-12).
+  [ ] Provide transparency information and instructions for use to deployers (Art. 13).
+  [ ] Design for effective human oversight (Art. 14).
+  [ ] Ensure appropriate accuracy, robustness and cybersecurity (Art. 15).
+  [ ] Complete a conformity assessment and affix CE marking (Art. 43).
+  [ ] Register the system in the EU database (Art. 71).
+  [ ] Run post-market monitoring and report serious incidents (Art. 72-73).
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
+================================================================
+System: StationWatch
+EU AI Act risk tier: PROHIBITED
+================================================================
+
+Matched categories:
+  * [Prohibited] Real-time remote biometric identification in public spaces (Art. 5(1)(h))
+      Real-time remote biometric identification deployed in publicly accessible spaces for law-enforcement purposes is banned, subject to narrowly defined exceptions.
+  * [High-Risk] Law enforcement (Annex III, point 6)
+      AI assisting law enforcement in ways that can interfere with fundamental rights is high-risk (unless a prohibited practice applies).
+
+Reviewer flags:
+  ! Competing signals detected from tier(s) High-Risk -- precedence resolved to Prohibited, but a human reviewer should confirm which use case dominates.
+
+Obligations checklist:
+  [ ] Do NOT place on the market, put into service, or use in the EU -- the practice is banned.
+  [ ] Decommission or redesign the system to remove the prohibited functionality.
+  [ ] Document the prohibition analysis and legal review trail.
+  [ ] Note: fines up to EUR 35M or 7% of worldwide annual turnover.
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
+================================================================
+System: MailGuard
+EU AI Act risk tier: MINIMAL RISK
+================================================================
+
+Matched categories: none -- no prohibited, high-risk or limited-risk signals found. Default: Minimal Risk.
+
+Obligations checklist:
+  [ ] No mandatory AI Act obligations for this tier.
+  [ ] Consider voluntary codes of conduct (Art. 95).
+  [ ] If you provide a general-purpose AI model, check the separate provider obligations (Art. 51-55).
+  [ ] Keep basic documentation of intended use as good practice.
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
+================================================================
+System: CivicTrust Welfare Scoring
+EU AI Act risk tier: PROHIBITED
+================================================================
+
+Matched categories:
+  * [Prohibited] Social scoring (Art. 5(1)(c))
+      The system evaluates or classifies people over time based on social behaviour or personal characteristics, and the resulting score leads to detrimental treatment in unrelated contexts.
+  * [High-Risk] Essential private/public services (Annex III, point 5)
+      AI evaluating eligibility for public benefits or creditworthiness, or used in pricing/dispatch of essential services, is high-risk.
+
+Reviewer flags:
+  ! Competing signals detected from tier(s) High-Risk -- precedence resolved to Prohibited, but a human reviewer should confirm which use case dominates.
+
+Obligations checklist:
+  [ ] Do NOT place on the market, put into service, or use in the EU -- the practice is banned.
+  [ ] Decommission or redesign the system to remove the prohibited functionality.
+  [ ] Document the prohibition analysis and legal review trail.
+  [ ] Note: fines up to EUR 35M or 7% of worldwide annual turnover.
+
+Disclaimer: Educational tool only -- not legal advice. The rule mapping is simplified relative to the official regulation text. Verify any real deployment against the EU AI Act itself and consult qualified counsel.
+
