@@ -1,6 +1,6 @@
 # AI Governance Projects
 
-Twelve buildable, portfolio-ready projects covering the core competencies of AI governance — six technical builds plus six analyst/operations projects (07–12) drawn from a 25-posting analysis of junior AI governance roles.
+Thirteen buildable, portfolio-ready projects covering the core competencies of AI governance — six technical builds plus seven analyst/operations projects (07–13) drawn from a 25-posting analysis of junior AI governance roles.
 
 | # | Project | Governance competency |
 |---|---------|----------------------|
@@ -16,6 +16,7 @@ Twelve buildable, portfolio-ready projects covering the core competencies of AI 
 | 10 | [`vendor-ai-assessment/`](./vendor-ai-assessment/) | Vendor review — reusable checklist + completed public-tool assessment |
 | 11 | [`regulatory-tracker/`](./regulatory-tracker/) | Regulatory tracking — monthly brief template, sample brief, scaffolding script |
 | 12 | [`llm-eval-case-study/`](./llm-eval-case-study/) | Governance case study — turning LLM evaluation evidence into risk decisions |
+| 13 | [`khanmigo-risk-assessment/`](./khanmigo-risk-assessment/) | Third-party risk assessment — Khanmigo (education AI), public-sources only |
 
 ## Skills coverage
 
@@ -26,9 +27,9 @@ governance roles (frequency in sample) to the projects demonstrating them.
 |---|---|
 | AI system inventory (40%) | 07 intake registry · 05 model registry |
 | Use-case intake / triage (36%) | 07 intake form, rubric, triage CLI |
-| Stakeholder coordination (36%) | 07 intake workflow · 08 policy roles & review path · 10 vendor review · 06 dashboard |
-| Risk-assessment authoring (36%) | 09 full assessment · 01 EU AI Act classifier · 10 vendor findings |
-| Privacy-law adjacency (36%) | 09 data-protection controls · 08 data rules · 10 DPA checklist |
+| Stakeholder coordination (36%) | 07 intake workflow · 08 policy roles & review path · 10 vendor review · 06 dashboard · 13 stakeholder map & pilot gates |
+| Risk-assessment authoring (36%) | 09 full assessment · 13 third-party assessment (public sources) · 01 EU AI Act classifier · 10 vendor findings |
+| Privacy-law adjacency (36%) | 09 data-protection controls · 13 COPPA/FERPA DPA review · 08 data rules · 10 DPA checklist |
 | Regulatory tracking (32%) | 11 monthly briefs · 09 EU AI Act tiering |
 | Internal AI policy drafting (24%) | 08 GenAI acceptable-use policy |
 
@@ -48,9 +49,9 @@ Every project is self-contained, runs on Python 3.12 with **standard library onl
 cd eu-ai-act-risk-classifier && python classify.py --demo
 ```
 
-## Why these twelve
+## Why these thirteen
 
-Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01–06 prove the technical evaluation skills; projects 07–12 prove the analyst/operations skills junior postings ask for most — intake, triage, policy drafting, vendor review, and regulatory tracking. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief) — the kind of evidence that lands interviews.
+Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01–06 prove the technical evaluation skills; projects 07–13 prove the analyst/operations skills junior postings ask for most — intake, triage, policy drafting, vendor review, regulatory tracking, and third-party assessment from public sources. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief) — the kind of evidence that lands interviews.
 
 ## Notes
 
