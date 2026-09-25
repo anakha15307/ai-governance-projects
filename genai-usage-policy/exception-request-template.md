@@ -1,4 +1,4 @@
-# GenAI Policy Exception Request — Template
+# GenAI Policy Exception Request: Template
 
 > **Illustrative template.** Submit per §10 of the
 > [GenAI acceptable use policy](./genai-acceptable-use-policy.md).

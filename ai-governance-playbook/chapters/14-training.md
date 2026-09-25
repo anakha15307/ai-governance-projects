@@ -1,6 +1,6 @@
 # Chapter 14: Training
 
-**Purpose:** Make sure each role knows what it needs to know — executives
+**Purpose:** Make sure each role knows what it needs to know, executives
 can govern, builders can build safely, users can use AI without creating
 incidents.
 
@@ -25,7 +25,7 @@ One generic "AI training" teaches nobody anything. Minimum role tracks:
 
 ### 2. Make it stick
 
-- **Scenario-based:** "A customer pastes their password into the chatbot —
+- **Scenario-based:** "A customer pastes their password into the chatbot, 
   what do you do?" beats 40 slides on data classification.
 - **Test it:** short quizzes with a pass threshold; track completion as a
   program KPI (Chapter 15). Training nobody verifies is a checkbox.
@@ -34,7 +34,7 @@ One generic "AI training" teaches nobody anything. Minimum role tracks:
 
 ### 3. Track and report
 
-Completion rates by role, quiz scores, overdue counts — reported in the
+Completion rates by role, quiz scores, overdue counts, reported in the
 program metrics (Chapter 15). Chronic non-completion in a high-risk area is
 a governance finding, not an HR problem.
 
@@ -42,10 +42,10 @@ a governance finding, not an HR problem.
 
 *Meridian Logistics* rolls out training alongside the Relay deployment.
 Support agents (human reviewers) get a 45-minute briefing: their approval
-duties, the escalation path, and a live exercise — five drafts, two with
+duties, the escalation path, and a live exercise, five drafts, two with
 planted errors, reviewed together to calibrate what "careful review" looks
 like. Result: agents flag that the review UI buries the policy-amount field
-— a Chapter 7 interface fix that testing alone hadn't surfaced. Training
+, a Chapter 7 interface fix that testing alone hadn't surfaced. Training
 doubles as a control-design feedback loop.
 
 ## Common pitfalls

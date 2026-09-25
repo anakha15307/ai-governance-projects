@@ -12,7 +12,7 @@ case; re-validate whenever autonomy or stakes change.
   each time. Highest friction, strongest control. Use for irreversible or
   high-stakes actions.
 - **Human-on-the-loop:** the AI acts (or prepares action) while a human
-  supervises and can intervene — sampling, dashboards, alerts. Works only if
+  supervises and can intervene: sampling, dashboards, alerts. Works only if
   the human has real authority and real attention.
 - **Human-out-of-the-loop:** the AI acts autonomously; humans review
   aggregate performance afterward. Acceptable only for low-stakes, reversible
@@ -32,10 +32,10 @@ Human oversight fails in predictable ways: reviewers rubber-stamp, attention
 decays, and the interface hides what matters. Design requirements:
 
 - The reviewer must see **what the AI is uncertain about** and **what
-  changed** since last review — not just an "Approve" button.
+  changed** since last review: not just an "Approve" button.
 - Review workload must be feasible: if a human must approve 500 items a day,
   you have theater, not oversight.
-- Rotate reviewers and sample their decisions (Chapter 8, control E-4) —
+- Rotate reviewers and sample their decisions (Chapter 8, control E-4), 
   measure the catch rate, don't assume it.
 
 ### 3. Define the mandatory-human list
@@ -55,13 +55,13 @@ plan.
 ## Worked mini-example (illustrative)
 
 *Meridian Logistics*, **ML-UC-007**: Relay drafts replies; the agent reviews
-and sends — human-**on**-the-loop for routine tickets, human-**in**-the-loop
+and sends: human-**on**-the-loop for routine tickets, human-**in**-the-loop
 for refunds over $500 (draft cannot send until the agent opens the policy
 page and clicks explicit approval). The review UI shows the draft with
 policy-amount fields highlighted and a one-line "why this draft" summary.
 Escalation: any draft the agent flags goes to the support lead within 4
 business hours; flagged drafts are excluded from training data. Monthly
-sampling measures the agent catch rate on planted errors (target ≥ 90%) —
+sampling measures the agent catch rate on planted errors (target ≥ 90%), 
 because the oversight claim is "agents catch bad drafts," and claims get
 tested (Chapter 8).
 
@@ -75,7 +75,7 @@ tested (Chapter 8).
   wait? Decide in advance.
 - **Assuming oversight transfers liability.** A human clicking "approve"
   on something they couldn't reasonably evaluate is not meaningful oversight
-  — and won't look like it afterward.
+, and won't look like it afterward.
 
 ## Templates
 
@@ -83,5 +83,5 @@ tested (Chapter 8).
 
 ## Repo tooling
 
-- [`policy-violation-monitor/`](../../policy-violation-monitor/) — supervisor
+- [`policy-violation-monitor/`](../../policy-violation-monitor/), supervisor
   monitor implementing human-in-the-loop escalation.

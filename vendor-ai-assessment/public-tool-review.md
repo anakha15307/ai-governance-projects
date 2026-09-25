@@ -1,14 +1,14 @@
-# Completed Vendor Assessment — ChatGPT (OpenAI), Illustrative
+# Completed Vendor Assessment: ChatGPT (OpenAI), Illustrative
 
 > **Illustrative sample, prepared 2026-09-24.** Based solely on publicly
 > available information (OpenAI's published trust, privacy, and security
 > pages as generally understood). Not legal advice, not a certification, and
-> not a substitute for a real procurement review — vendor terms change, so
+> not a substitute for a real procurement review, vendor terms change, so
 > verify everything against current contracts and documentation before any
 > purchasing decision. No affiliation with OpenAI.
 > Checklist: [vendor-ai-checklist.md](./vendor-ai-checklist.md).
 
-**Tool:** ChatGPT (OpenAI) — public AI assistant
+**Tool:** ChatGPT (OpenAI), public AI assistant
 **Use case under review (illustrative):** internal productivity (drafting,
 summarization) with an enterprise/workspace tier; **not** approved here for
 confidential or regulated-decision use.
@@ -31,8 +31,8 @@ no technical testing.
 
 | # | Item | Rating | Evidence / notes (illustrative) |
 |---|---|---|---|
-| B1 | DPA executed | Conditional | Enterprise/workspace tiers offer DPAs — must be actually executed, not assumed |
-| B2 | No training on customer data by default | Conditional | Enterprise tiers state business data is not used for training; **consumer/free tiers differ** — confirm the exact tier in writing |
+| B1 | DPA executed | Conditional | Enterprise/workspace tiers offer DPAs: must be actually executed, not assumed |
+| B2 | No training on customer data by default | Conditional | Enterprise tiers state business data is not used for training; **consumer/free tiers differ**, confirm the exact tier in writing |
 | B3 | Retention and deletion | Conditional | Retention controls exist on business tiers; verify settings and deletion-on-termination in the agreement |
 | B4 | Data residency / transfers | Conditional | Review published data-residency options against your requirements |
 | B5 | Data minimization | Pass | Service collects account and usage data as documented; no evidence of excess collection for the stated scope |
@@ -51,7 +51,7 @@ no technical testing.
 
 | # | Item | Rating | Evidence / notes (illustrative) |
 |---|---|---|---|
-| D1 | Independent attestation | Pass | SOC 2 Type II and related certifications publicly claimed — verify current reports under NDA |
+| D1 | Independent attestation | Pass | SOC 2 Type II and related certifications publicly claimed, verify current reports under NDA |
 | D2 | Encryption | Pass | TLS in transit; encryption at rest as documented |
 | D3 | SSO/MFA/RBAC/audit logging | Conditional | Available on business tiers; verify SSO and audit-log access are enabled for your tenant |
 | D4 | Incident notification | Conditional | Confirm notification timelines in the enterprise agreement |
@@ -87,8 +87,8 @@ personal data beyond the agreed classes, or decisions about individuals.
 
 | Finding | Required action | Owner | Due |
 |---|---|---|---|
-| B1–B3, D3 | Execute enterprise-tier DPA; confirm no-training-on-data and retention/deletion settings in writing | Legal + IT | Before rollout |
-| E2–E3 | Legal review of AI Act role allocation, IP, and indemnity terms | Legal | Before rollout |
+| B1-B3, D3 | Execute enterprise-tier DPA; confirm no-training-on-data and retention/deletion settings in writing | Legal + IT | Before rollout |
+| E2-E3 | Legal review of AI Act role allocation, IP, and indemnity terms | Legal | Before rollout |
 | A3, D4, F2 | Confirm subprocessor change notices, incident timelines, and exit terms in the agreement | Procurement | Before rollout |
 | User control | Deploy with SSO enforced, consumer-tier use prohibited by policy, and mandatory user training | AI governance lead | Before rollout |
 

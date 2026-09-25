@@ -1,6 +1,6 @@
 # Chapter 10: Monitoring
 
-**Purpose:** Know that a deployed system is still behaving as approved —
+**Purpose:** Know that a deployed system is still behaving as approved, 
 and detect when it isn't, before customers or regulators do.
 
 **When to use it:** From deployment onward; monitoring plans are written
@@ -24,11 +24,11 @@ is a postmortem outline.
 - **Behavioral drift:** volume anomalies, new failure modes, changes in
   user interaction patterns (e.g., sudden spike in jailbreak attempts).
   Compare against the pre-deployment baseline from Chapter 8.
-- **Context drift:** the world changed around the model — new products, new
+- **Context drift:** the world changed around the model, new products, new
   policies, new regulations, new data distributions. The model didn't change;
   its correctness did.
 
-### 3. Define review triggers — not just schedules
+### 3. Define review triggers, not just schedules
 
 Scheduled reviews (by tier) plus event triggers that force an out-of-cycle
 review: model or prompt change, vendor update, data source change, incident
@@ -54,11 +54,11 @@ risk score, a control, or a tier was either trivial or mishandled.
 *Meridian Logistics*, **ML-UC-007** monitoring plan: weekly sampling of 20
 replies (pass = accurate, policy-correct, no PII leakage); alert if weekly
 pass rate drops below 95% or any critical failure (wrong refund sent,
-PII leak) occurs — alert goes to the support lead and the analyst within
+PII leak) occurs: alert goes to the support lead and the analyst within
 one business day. Triggers: vendor model update → re-run the 30-scenario
 eval set before accepting; new refund policy → re-test R-1 scenarios within
 7 days. At month 4, sampling catches the vendor's silent prompt-template
-change altering the greeting's legal disclaimer — caught by monitoring,
+change altering the greeting's legal disclaimer, caught by monitoring,
 not by the vendor's changelog (which didn't mention it). Finding: add
 "vendor change notification" to the contract at renewal (Chapter 12).
 
@@ -80,9 +80,9 @@ not by the vendor's changelog (which didn't mention it). Finding: add
 
 ## Repo tooling
 
-- [`policy-violation-monitor/`](../../policy-violation-monitor/) — automated
+- [`policy-violation-monitor/`](../../policy-violation-monitor/), automated
   output monitoring with human escalation.
-- [`governance-dashboard/`](../../governance-dashboard/) — risk register
+- [`governance-dashboard/`](../../governance-dashboard/), risk register
   dashboard for rolling monitoring findings up to stakeholders.
-- [`model-registry/`](../../model-registry/) — version tracking so eval
+- [`model-registry/`](../../model-registry/), version tracking so eval
   results stay tied to model versions.

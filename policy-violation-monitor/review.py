@@ -6,7 +6,7 @@ Usage:
 
 `list` shows escalations with status 'pending'.
 `decide` records the reviewer's decision as a new entry in the audit log
-and marks the item decided in review_queue.json. Nothing is deleted —
+and marks the item decided in review_queue.json. Nothing is deleted - 
 the queue is an append-friendly record of what humans did.
 """
 
@@ -58,7 +58,7 @@ def cmd_list(args):
         for q in decided:
             d = q.get("decision", {})
             print(f"  {q['output_id']}: {d.get('verdict')} "
-                  f"by {d.get('reviewer')} — {d.get('note', '')}")
+                  f"by {d.get('reviewer')} - {d.get('note', '')}")
 
 
 def cmd_decide(args):

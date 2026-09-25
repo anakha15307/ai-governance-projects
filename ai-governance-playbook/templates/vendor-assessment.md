@@ -3,13 +3,13 @@
 Per Playbook Chapter 12. Tag facts: **[Claim]** (vendor says),
 **[Observed]** (you saw in trial/docs/references).
 
-Vendor: [Name] — Product: [Name, version]
-Use-case ID: [ORG-UC-NNN] — Assessor: [Name] — Date: [YYYY-MM-DD]
+Vendor: [Name]. Product: [Name, version]
+Use-case ID: [ORG-UC-NNN]. Assessor: [Name]. Date: [YYYY-MM-DD]
 
 ## 1. What it does
 
 - Capabilities (vendor's words): [ ]
-- Limitations (vendor's words — press for these): [ ]
+- Limitations (vendor's words: press for these): [ ]
 - Your trial observations: [What you actually tested, results]
 
 ## 2. Data practices
@@ -18,13 +18,13 @@ Use-case ID: [ORG-UC-NNN] — Assessor: [Name] — Date: [YYYY-MM-DD]
 |---|---|---|
 | Does our data train their models? | [Yes / No / Opt-in-out] | [Claim / Observed / Corroborated] |
 | Data retention period | [ ] | [ ] |
-| Deletion on termination | [Yes / No — process] | [ ] |
-| Sub-processors disclosed | [Yes / No — list] | [ ] |
+| Deletion on termination | [Yes / No: process] | [ ] |
+| Sub-processors disclosed | [Yes / No: list] | [ ] |
 | Data residency | [ ] | [ ] |
 
 ## 3. Security & reliability
 
-- SOC 2 / ISO 27001 / equivalent: [Report date, scope — reviewed?]
+- SOC 2 / ISO 27001 / equivalent: [Report date, scope, reviewed?]
 - Pen-test summary available: [Yes / No]
 - Known incident history: [ ]
 - Uptime SLA: [ ]

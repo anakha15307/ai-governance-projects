@@ -13,24 +13,24 @@ tiering, and no auditable record of *why* a use case got the review it got.
 
 ## Users / Stakeholders
 
-- **Business requestors** — submit the intake form to get a fast, predictable answer on what review their AI idea needs.
-- **AI governance analyst** — runs triage, assigns review tracks, keeps the registry current.
-- **Governance committee / legal / security** — receive Track C and D escalations with complete context.
-- **Auditors** — read the registry to verify that intake, tiering, and review decisions are documented.
+- **Business requestors**: submit the intake form to get a fast, predictable answer on what review their AI idea needs.
+- **AI governance analyst**: runs triage, assigns review tracks, keeps the registry current.
+- **Governance committee / legal / security**: receive Track C and D escalations with complete context.
+- **Auditors**: read the registry to verify that intake, tiering, and review decisions are documented.
 
 ## Methods
 
-- **Intake form** ([intake-form.md](./intake-form.md)) — requestor details, use-case
+- **Intake form** ([intake-form.md](./intake-form.md)), requestor details, use-case
   description, data categories, technology and deployment posture, human
   oversight level, risk-indicator checklist, approvals.
-- **Triage rubric** ([triage-rubric.md](./triage-rubric.md)) — five scored dimensions
+- **Triage rubric** ([triage-rubric.md](./triage-rubric.md)), five scored dimensions
   (data, decision impact, exposure, vendor posture, regulatory sensitivity),
-  0–15 scale, mapped to four review tracks (A Minimal → D Critical) with SLAs,
+  0-15 scale, mapped to four review tracks (A Minimal → D Critical) with SLAs,
   plus score-independent automatic Track D triggers.
-- **Registry** ([registry.json](./registry.json)) — every triaged use case with
+- **Registry** ([registry.json](./registry.json)), every triaged use case with
   dimension scores, one-line rationale per dimension, total score, assigned
   track, SLA due date, and status. Three illustrative sample entries included.
-- **Triage CLI** (`triage.py`, stdlib only) — interactive scoring prompts or
+- **Triage CLI** (`triage.py`, stdlib only): interactive scoring prompts or
   `--demo` mode; computes the track, stamps SLA dates, and appends to the
   registry.
 
@@ -44,7 +44,7 @@ python3 triage.py              # interactive triage
 
 - A repeatable front door: any AI use case can be registered in one sitting,
   with a defensible review track assigned the same day.
-- Triage decisions are reconstructable — each registry entry carries the
+- Triage decisions are reconstructable: each registry entry carries the
   scores and rationale behind its track, which is what auditors ask for.
 - Sample registry demonstrates the full range: a Track A notify-only pilot
   (score 2), a Track B standard review (score 7), and a Track C elevated

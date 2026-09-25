@@ -7,7 +7,7 @@ Each rule is a dict with:
   description - what the rule guards against
   check       - callable(text: str) -> list of evidence strings (empty = no hit)
 
-Detection is deterministic regex/heuristics only — no network, no models.
+Detection is deterministic regex/heuristics only, no network, no models.
 To add a rule, append a dict with the same shape (see README for details).
 """
 

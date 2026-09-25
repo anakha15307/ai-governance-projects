@@ -1,4 +1,4 @@
-# Risk Assessment: AI Tutoring Assistant — "StudyBuddy" Pilot
+# Risk Assessment: AI Tutoring Assistant - "StudyBuddy" Pilot
 
 > **Illustrative sample assessment.** All organizations, people, products, and
 > figures are fictional. Not legal advice; EU AI Act analysis is a simplified
@@ -8,7 +8,7 @@
 **Assessment ID:** RA-2026-011 (illustrative)
 **Date:** 2026-09-24 (illustrative)
 **Assessor:** AI Governance Analyst (illustrative role)
-**System:** StudyBuddy — AI tutoring assistant (fictional product)
+**System:** StudyBuddy. AI tutoring assistant (fictional product)
 **Deployer:** Example School District (fictional organization)
 **Stage:** Pre-pilot (proposed)
 
@@ -24,7 +24,7 @@ accuracy trend, and suggested focus areas.
 
 - **Model:** fictional vendor-supplied large language model, fine-tuned on
   open educational content (illustrative).
-- **Users:** students aged 11–14 (minors), teachers, district administrators.
+- **Users:** students aged 11-14 (minors), teachers, district administrators.
 - **Data:** student prompts, generated responses, interaction logs; linked to
   the district's student information system for rostering (illustrative).
 - **Human oversight:** teachers review progress snapshots before any
@@ -35,7 +35,7 @@ accuracy trend, and suggested focus areas.
 | Question | Analysis |
 |---|---|
 | Prohibited use? | No. The system does not perform social scoring, real-time remote biometric identification, emotion inference in education, or other prohibited practices. |
-| High-risk? | **Yes — illustrative classification: High-Risk.** The progress snapshot evaluates learning outcomes and informs teacher intervention decisions, which falls within the education high-risk category (evaluation of learning outcomes / assessing the appropriate level of education). |
+| High-risk? | **Yes: illustrative classification: High-Risk.** The progress snapshot evaluates learning outcomes and informs teacher intervention decisions, which falls within the education high-risk category (evaluation of learning outcomes / assessing the appropriate level of education). |
 | Limited-risk (transparency) obligations? | Also yes: the conversational tutor must disclose that students are interacting with AI. |
 
 **Result:** treat as **High-Risk** (illustrative). The high-risk obligations
@@ -52,16 +52,16 @@ Measure, Manage). Illustrative mapping of key subcategories:
 
 | RMF function | Subcategory (illustrative) | How this assessment addresses it |
 |---|---|---|
-| **Govern 1** — culture of risk management | GV-1.1: policies and accountability | GenAI usage policy roles applied; named business owner and assessor |
-| **Govern 2** — risk management roles | GV-2.1: roles and responsibilities defined | §6 assigns owners per control |
-| **Map 1** — context established | MP-1.1: business value and intended use documented | §1 system description; §4 use-case context |
-| **Map 2** — categorization | MP-2.1: knowledge limits documented | §4 limitations; §2 tier classification |
-| **Map 5** — impacts characterized | MP-5.1: impacts to individuals assessed | §4 risk register |
-| **Measure 1** — risks identified and assessed | MS-1.1: test and evaluation | §5 evaluation plan; bias and accuracy testing pre-pilot |
-| **Measure 2** — bias and fairness | MS-2.x: fairness across groups | Risk R3; disaggregated accuracy testing |
-| **Manage 1** — risks prioritized | MG-1.1: response planning | §6 controls; residual risk ratings |
-| **Manage 2** — residual risk | MG-2.1: residual risk documented and communicated | §6 residual risk column; stakeholder sign-off §8 |
-| **Manage 4** — monitoring | MG-4.1: post-deployment monitoring | §7 monitoring plan |
+| **Govern 1**: culture of risk management | GV-1.1: policies and accountability | GenAI usage policy roles applied; named business owner and assessor |
+| **Govern 2**: risk management roles | GV-2.1: roles and responsibilities defined | §6 assigns owners per control |
+| **Map 1**: context established | MP-1.1: business value and intended use documented | §1 system description; §4 use-case context |
+| **Map 2**: categorization | MP-2.1: knowledge limits documented | §4 limitations; §2 tier classification |
+| **Map 5**: impacts characterized | MP-5.1: impacts to individuals assessed | §4 risk register |
+| **Measure 1**: risks identified and assessed | MS-1.1: test and evaluation | §5 evaluation plan; bias and accuracy testing pre-pilot |
+| **Measure 2**: bias and fairness | MS-2.x: fairness across groups | Risk R3; disaggregated accuracy testing |
+| **Manage 1**: risks prioritized | MG-1.1: response planning | §6 controls; residual risk ratings |
+| **Manage 2**: residual risk | MG-2.1: residual risk documented and communicated | §6 residual risk column; stakeholder sign-off §8 |
+| **Manage 4**: monitoring | MG-4.1: post-deployment monitoring | §7 monitoring plan |
 
 ## 4. Risk register
 
@@ -87,7 +87,7 @@ The pilot does **not** start until all gates pass:
 2. **Fairness eval:** accuracy disaggregated by student group proxies
    (illustrative); investigate any gap above the agreed threshold.
 3. **Red-team:** adversarial prompts (jailbreaks, requests for disallowed
-   content, attempts to extract other students' data) — methodology per the
+   content, attempts to extract other students' data), methodology per the
    [red-team harness](../red-team-harness/).
 4. **Privacy review:** data-flow walkthrough with the district privacy lead;
    confirm minimization and retention settings.
@@ -99,7 +99,7 @@ The pilot does **not** start until all gates pass:
 | ID | Control | Owner (illustrative) | Status |
 |---|---|---|---|
 | C1 | Pre-pilot accuracy eval suite with human grading; regression suite on each model update | AI Governance Analyst | Planned |
-| C2 | Tutor signals uncertainty ("I'm not sure — check with your teacher") instead of guessing | Vendor / integrator | Planned |
+| C2 | Tutor signals uncertainty ("I'm not sure: check with your teacher") instead of guessing | Vendor / integrator | Planned |
 | C3 | Teachers review weekly snapshots; no automated intervention decisions | Teaching staff | Planned |
 | C4 | Data minimization: collect only prompts, responses, and roster IDs needed for the pilot | Data steward | Planned |
 | C5 | Data processing agreement with retention limits and no training on student data without consent | Legal | Planned |
@@ -133,7 +133,7 @@ update this assessment (new version, dated).
 ## 8. Decision and sign-off
 
 **Recommendation (illustrative):** Proceed to a limited pilot (≤ 5
-classrooms) **only after** the §5 pre-pilot gates pass and controls C1–C17
+classrooms) **only after** the §5 pre-pilot gates pass and controls C1-C17
 are evidenced. Reassess before any expansion.
 
 | Role (illustrative) | Name | Decision | Date |

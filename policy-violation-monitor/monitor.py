@@ -218,7 +218,7 @@ def run(fixtures_path, audit_path, queue_path, max_cost, max_retries):
     print(f"  Retries used      : {retries_used}")
     print(f"  Cost consumed     : {total_cost}/{max_cost}")
     if aborted:
-        print("  NOTE: cost cap hit — some outputs were skipped/deferred.")
+        print("  NOTE: cost cap hit, some outputs were skipped/deferred.")
     print(f"  Escalations pending review: {pending}")
     print(f"  Audit log         : {audit_path}")
 

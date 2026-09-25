@@ -1,4 +1,4 @@
-# LLM Evaluation & Red-Teaming — Governance Case Study
+# LLM Evaluation & Red-Teaming: Governance Case Study
 
 A governance case study of an independent LLM evaluation project: turning
 model test evidence into risk decisions, controls, and stakeholder-ready
@@ -11,20 +11,20 @@ documentation. The technical work lives in
 
 Evaluation results don't govern anything by themselves. A red-team run that
 produces a scoreboard but no risk decision, no control recommendation, and
-no record an auditor can follow is an engineering exercise — not governance.
+no record an auditor can follow is an engineering exercise, not governance.
 The gap this project closes: converting test evidence into the artifacts a
 governance program actually runs on (risk entries, control requirements,
 deployment conditions, monitoring plans).
 
 ## Users / Stakeholders
 
-- **AI governance analyst (author)** — designs the evaluation, interprets
+- **AI governance analyst (author)**: designs the evaluation, interprets
   results, writes the governance record.
-- **Model/system owner** — receives control requirements and deployment
+- **Model/system owner**: receives control requirements and deployment
   conditions.
-- **Governance committee** — reviews residual risk and approves or blocks
+- **Governance committee**: reviews residual risk and approves or blocks
   deployment stages.
-- **Future auditors** — reconstruct decisions from the dated evidence trail.
+- **Future auditors**: reconstruct decisions from the dated evidence trail.
 
 ## Methods
 
@@ -35,7 +35,7 @@ deployment conditions, monitoring plans).
    borrowed from the [edtech assessment](../edtech-risk-assessment/)).
 2. **Built a repeatable red-team harness** ([red-team-harness](../red-team-harness/)):
    26 adversarial attacks across prompt injection, jailbreak personas, data
-   exfiltration, and disallowed content, plus benign controls — run against
+   exfiltration, and disallowed content, plus benign controls, run against
    "before guardrails" and "after guardrails" targets with a rule-based,
    auditable judge.
 3. **Ran bias probes** ([bias-audit-suite](../bias-audit-suite/)) to check
@@ -45,7 +45,7 @@ deployment conditions, monitoring plans).
    residual-risk statements.
 5. **Wrote the governance record**: risk entries with likelihood/impact,
    required controls with owners, deployment conditions (pilot only after
-   gates pass), and a monitoring plan with thresholds — the same structure
+   gates pass), and a monitoring plan with thresholds, the same structure
    as the [edtech risk assessment](../edtech-risk-assessment/).
 
 ## Results
@@ -54,14 +54,14 @@ deployment conditions, monitoring plans).
   across all four attack categories, with benign-task helpfulness preserved
   (2/2 controls helpful). Full transcripts in `results.json`; scoreboard in
   `scoreboard.md` (see [red-team-harness](../red-team-harness/)).
-- **Governance translation:** the scoreboard became deployment conditions —
+- **Governance translation:** the scoreboard became deployment conditions, 
   e.g., *pilot may proceed only with guardrail configuration X evidenced by
   a re-run of the harness; any model or config change triggers regression*.
 - **Monitoring commitments:** periodic re-runs of the attack suite,
   incident-driven re-testing, and human review sampling of production
   outputs.
 - **Reusable method:** the harness documents how to point it at a real model
-  endpoint (stdlib `urllib` adapter) and how to extend the attack library —
+  endpoint (stdlib `urllib` adapter) and how to extend the attack library, 
   so the case study is a starting point, not a one-off.
 
 ## Risks and Controls

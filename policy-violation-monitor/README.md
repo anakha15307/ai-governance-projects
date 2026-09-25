@@ -1,6 +1,6 @@
 # Policy Violation Monitor
 
-A supervisor-style oversight layer for LLM application outputs — the kind of
+A supervisor-style oversight layer for LLM application outputs, the kind of
 control that sits between a model and the user in any deployed AI system.
 Every output is screened against a set of policy rules; high-severity
 violations are auto-blocked, medium-severity ones are escalated to a human
@@ -83,7 +83,7 @@ annotated hits); an empty list means "no violation". Current rules:
 | INJ-001 | Prompt-injection in output text   | medium   |
 | DIS-001 | Disallowed content markers        | high     |
 
-To add a rule, append a dict with the same shape — `evaluate()` picks it up
+To add a rule, append a dict with the same shape, `evaluate()` picks it up
 automatically. Severity drives the action: **high → auto-block**,
 **medium → escalate for human review**, **low → log-and-pass**.
 
@@ -94,18 +94,18 @@ automatically. Severity drives the action: **high → auto-block**,
 | Severity-based routing | Tiered response playbooks (block / review / allow) |
 | `review_queue.json` + `review.py decide` | Human-in-the-loop review queues (e.g. Trust & Safety ops) |
 | `audit.log.jsonl` (append-only) | Immutable audit trails required by EU AI Act / NIST AI RMF logging guidance |
-| Retry with backoff | Resilient pipeline design — transient failures shouldn't drop oversight |
+| Retry with backoff | Resilient pipeline design: transient failures shouldn't drop oversight |
 | Cost cap with graceful abort | Budget guardrails on monitoring itself; skipped items are logged, never silent |
 | Deterministic regex rules | First line of defense before heavier model-based classifiers; auditable and explainable |
 
 ## Files
 
-- `policies.py` — policy rule definitions and `evaluate()`
-- `monitor.py` — supervisor CLI (`--demo`), retry, cost cap, audit logging
-- `review.py` — human review CLI (`list`, `decide`)
-- `fixtures/outputs.jsonl` — 20 simulated outputs (clean + planted violations)
-- `audit.log.jsonl` — created on first run; append-only decision log
-- `review_queue.json` — created on first run; pending/decided escalations
+- `policies.py`, policy rule definitions and `evaluate()`
+- `monitor.py`, supervisor CLI (`--demo`), retry, cost cap, audit logging
+- `review.py`, human review CLI (`list`, `decide`)
+- `fixtures/outputs.jsonl`, 20 simulated outputs (clean + planted violations)
+- `audit.log.jsonl`, created on first run; append-only decision log
+- `review_queue.json`, created on first run; pending/decided escalations
 
 ## Example output
 
@@ -142,7 +142,7 @@ RUN SUMMARY
 
 ## Limitations (by design)
 
-- Detection is regex/heuristic — real deployments layer model-based
+- Detection is regex/heuristic: real deployments layer model-based
   classifiers on top. Deterministic rules are the auditable baseline.
 - The disallowed-content rule uses a deliberately narrow keyword set; it
   demonstrates the mechanism, not a production blocklist.

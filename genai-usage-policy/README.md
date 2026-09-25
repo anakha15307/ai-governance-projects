@@ -1,7 +1,7 @@
 # GenAI Usage Policy
 
 A complete, adoption-ready acceptable-use policy for generative AI, plus an
-exception request template. Illustrative sample — not legal advice.
+exception request template. Illustrative sample, not legal advice.
 
 ## Problem
 
@@ -12,11 +12,11 @@ up in a consumer chatbot.
 
 ## Users / Stakeholders
 
-- **All staff and contractors** — need clear rules on what they may and may
+- **All staff and contractors**: need clear rules on what they may and may
   not do with GenAI.
-- **Managers** — sponsor exception requests and ensure team awareness.
-- **AI governance lead** — owns the approved-tool list and the review path.
-- **Security, legal/privacy, internal audit** — review, advise, and verify
+- **Managers**: sponsor exception requests and ensure team awareness.
+- **AI governance lead**: owns the approved-tool list and the review path.
+- **Security, legal/privacy, internal audit**: review, advise, and verify
   compliance.
 
 ## Methods
@@ -32,7 +32,7 @@ up in a consumer chatbot.
   uses require committee or executive sign-off.
 - [Exception request template](./exception-request-template.md) captures
   justification, risk description, compensating controls, approvals, and
-  expiry review — exceptions are time-boxed, never open-ended.
+  expiry review: exceptions are time-boxed, never open-ended.
 
 ## Results
 

@@ -1,6 +1,6 @@
 # AI Incident Deconstructions
 
-Governance deconstructions of three real, public AI incidents — root-cause analysis
+Governance deconstructions of three real, public AI incidents, root-cause analysis
 from a governance lens, not news summaries. Each deconstruction asks: what failed
 technically, what failed organizationally, which controls were missing, and what a
 competent AI governance program would have done differently.
@@ -16,8 +16,8 @@ competent AI governance program would have done differently.
 | 02 | [`deconstructions/02-itutorgroup-eeoc.md`](./deconstructions/02-itutorgroup-eeoc.md) | Hiring / HR tech | Recruiting software auto-rejected older applicants; $365,000 EEOC settlement (2023) |
 | 03 | [`deconstructions/03-dpd-chatbot.md`](./deconstructions/03-dpd-chatbot.md) | Logistics / customer service | Chatbot jailbroken into profanity and brand criticism; AI element disabled (Jan 2024) |
 
-Plus [`patterns.md`](./patterns.md) — what recurs across all three incidents — and
-[`SOURCES.md`](./SOURCES.md) — every source cited, with quality notes.
+Plus [`patterns.md`](./patterns.md), what recurs across all three incidents: and
+[`SOURCES.md`](./SOURCES.md), every source cited, with quality notes.
 
 ## Problem
 
@@ -29,13 +29,13 @@ settlement) and keep the disease (no ownership, no testing, no monitoring).
 
 ## Users / Stakeholders
 
-- **AI governance analyst (author)** — selects incidents, separates technical from
+- **AI governance analyst (author)**: selects incidents, separates technical from
   governance causes, writes findings as controls.
-- **Governance committee / leadership** — reads the patterns, not just the
+- **Governance committee / leadership**: reads the patterns, not just the
   incidents; decides which missing controls to fund.
-- **Hiring managers** — sees evidence of analyst judgment: the ability to turn a
+- **Hiring managers**: sees evidence of analyst judgment: the ability to turn a
   news story into a control recommendation with an owner.
-- **Practitioners** — reuses the deconstruction template for their own incidents.
+- **Practitioners**: reuses the deconstruction template for their own incidents.
 
 ## Methods
 
@@ -43,14 +43,14 @@ settlement) and keep the disease (no ownership, no testing, no monitoring).
    (court decision, regulatory settlement, or contemporaneous multi-outlet reporting),
    enough public detail to separate causes, and relevance to common enterprise AI
    uses (customer service, hiring). AI Incident Database entries anchor each case.
-2. **Reconstruct the timeline first.** Dates and sequence before analysis — causes
+2. **Reconstruct the timeline first.** Dates and sequence before analysis, causes
    can't be assigned without knowing what happened when.
 3. **Separate technical cause from governance cause.** The technical cause explains
    *how* the system produced the failure (hallucination, hard-coded threshold,
    weak guardrails). The governance cause explains *why it was allowed to*
    (no owner, no testing, no monitoring, accountability engineered away).
 4. **Name the missing controls in control language.** Every gap is stated as
-   preventive, detective, or corrective — because "we should have tested more" is
+   preventive, detective, or corrective: because "we should have tested more" is
    a wish, while "no pre-deployment evaluation set (preventive)" is a finding.
 5. **Write recommendations with owners.** A control without an owner is a
    suggestion. Each recommendation names who is accountable for implementing it.
@@ -87,5 +87,5 @@ settlement) and keep the disease (no ownership, no testing, no monitoring).
 - Extend into new domains: a hiring-bias case outside the US, a healthcare or
   lending incident, a GPAI/transparency-obligation case under the EU AI Act.
 - Turn the patterns into a control checklist for pre-deployment review of
-  customer-facing AI — closing the loop from incident analysis back into
+  customer-facing AI: closing the loop from incident analysis back into
   prevention.

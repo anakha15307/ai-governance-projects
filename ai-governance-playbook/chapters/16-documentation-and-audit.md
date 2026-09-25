@@ -1,6 +1,6 @@
 # Chapter 16: Documentation and Audit
 
-**Purpose:** Keep records that prove the program ran — so an auditor, a
+**Purpose:** Keep records that prove the program ran, so an auditor, a
 regulator, or a future you can reconstruct what was decided, on what
 evidence, and by whom.
 
@@ -23,19 +23,19 @@ reconstructed afterward.
 | Training records | Ch. 14 | 3 years |
 | Metrics and board reports | Ch. 15 | 5 years |
 
-Retention periods are illustrative — align with your organization's
+Retention periods are illustrative: align with your organization's
 records schedule and legal counsel.
 
 ## Evidence quality standards
 
 Not all records are equal. Tag evidence by quality:
 
-- **Level 1 — Direct:** test results, logs, signed records, observed
+- **Level 1: Direct:** test results, logs, signed records, observed
   behavior. Strongest.
-- **Level 2 — Corroborated:** vendor claims backed by independent evidence
+- **Level 2: Corroborated:** vendor claims backed by independent evidence
   (audit report, trial observation, reference customer).
-- **Level 3 — Asserted:** vendor or owner claims without corroboration.
-  Usable for scoping; never the sole basis for a Tier 3–4 decision.
+- **Level 3: Asserted:** vendor or owner claims without corroboration.
+  Usable for scoping; never the sole basis for a Tier 3-4 decision.
 
 The Chapter 4 evidence discipline (claim vs. observation vs. recommendation)
 is how this gets applied in practice. An assessment built on Level-3
@@ -51,9 +51,9 @@ For any use case, an auditor should be able to answer in under an hour:
 - [ ] Are required controls assigned to owners with effectiveness tests?
 - [ ] Do monitoring and review records exist for the current period?
 - [ ] Are incidents/near-misses logged with post-incident reviews?
-- [ ] Can every factual claim in the assessment be traced to Level 1–2 evidence?
+- [ ] Can every factual claim in the assessment be traced to Level 1-2 evidence?
 
-If any answer is no, that's a program finding — fix it before the auditor
+If any answer is no, that's a program finding: fix it before the auditor
 does.
 
 ## Procedure
@@ -75,7 +75,7 @@ selections with owners, 60-day sampling results (91% catch rate), signed
 conditional-go decision record with conditions tracked to closure, monitoring
 plan with weekly findings, one SEV-2 record with post-incident review, and
 the vendor assessment. The auditor's one finding: training records show 4
-agents completed the reviewer briefing a week *after* go-live — a sequencing
+agents completed the reviewer briefing a week *after* go-live, a sequencing
 gap, remediated by tying training completion to the deployment checklist
 (Chapter 9). The program passes because the records existed, not because
 anyone scrambled.
@@ -83,13 +83,13 @@ anyone scrambled.
 ## Common pitfalls
 
 - **Reconstructing records for the audit.** If it wasn't written when it
-  happened, it's not evidence — it's creative writing.
+  happened, it's not evidence: it's creative writing.
 - **Overwriting instead of versioning.** "Final_v2" chaos destroys the
   decision trail. Version and retain.
 - **Evidence laundering.** A vendor claim copied into three documents is
   still Level 3.
 - **Keeping everything forever.** Retention without deletion is a breach
-  waiting to happen — follow the schedule.
+  waiting to happen: follow the schedule.
 
 ## Templates
 

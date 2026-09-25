@@ -47,16 +47,16 @@ def seed() -> None:
     print("== datasets ==")
     run("register-dataset", "--name", "resume-corpus", "--version", "2024.1",
         "--source", "Internal applicant portal exports",
-        "--license", "Proprietary — internal use only")
+        "--license", "Proprietary: internal use only")
     run("register-dataset", "--name", "labeled-resumes", "--version", "2024.3",
         "--source", "Third-party annotation vendor",
-        "--license", "Commercial — DPA in place")
+        "--license", "Commercial: DPA in place")
     run("register-dataset", "--name", "support-tickets", "--version", "2025.1",
         "--source", "Zendesk export",
-        "--license", "Proprietary — internal use only")
+        "--license", "Proprietary: internal use only")
     run("register-dataset", "--name", "transaction-logs", "--version", "2025.2",
         "--source", "Core banking data warehouse",
-        "--license", "Regulated — PCI-DSS scope")
+        "--license", "Regulated: PCI-DSS scope")
 
     print("\n== model 1: high-risk CV screener (approve path) ==")
     run("register-model", "--name", "cv-screener", "--version", "1.2",

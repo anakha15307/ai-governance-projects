@@ -1,7 +1,7 @@
-# AI Use-Case Intake Form — Template
+# AI Use-Case Intake Form: Template
 
 > **Illustrative template.** Adapt to your organization's governance program before use.
-> Part of the AI use-case intake project — see [README.md](./README.md).
+> Part of the AI use-case intake project: see [README.md](./README.md).
 
 All fields below should be completed by the requestor before a triage review begins.
 Incomplete forms are returned to the requestor; they do not enter the review queue.
@@ -44,7 +44,7 @@ Incomplete forms are returned to the requestor; they do not enter the review que
 
 | Field | Value |
 |---|---|
-| Model / tool (vendor name, model, version — or "to be selected") | |
+| Model / tool (vendor name, model, version: or "to be selected") | |
 | Deployment (internal / vendor SaaS / public model API / unmanaged tool) | |
 | Integration points (systems it connects to) | |
 | Human oversight (fully automated / human-in-the-loop / human-on-the-loop / advisory only) | |
