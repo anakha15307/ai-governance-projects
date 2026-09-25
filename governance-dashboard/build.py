@@ -327,8 +327,8 @@ def render(data: dict, stats: dict, today: datetime.date) -> str:
         parts.append(
             f'<div class="system" data-tier="{esc(tier)}">'
             f"<h3>{name}</h3> {badge(tier)}"
-            f'<div class="meta">Owner: {esc(system.get("owner_team", "—"))}'
-            f' &nbsp;·&nbsp; Status: {esc(system.get("deployment_status", "—"))}</div>\n'
+            f'<div class="meta">Owner: {esc(system.get("owner_team", "-"))}'
+            f' &nbsp;·&nbsp; Status: {esc(system.get("deployment_status", "-"))}</div>\n'
         )
         # Controls table
         parts.append(

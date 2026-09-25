@@ -1,7 +1,7 @@
 # Patterns across the three incidents
 
 Three different sectors (aviation, hiring, parcel delivery), three different countries,
-three different failure modes — and the same governance failures underneath.
+three different failure modes: and the same governance failures underneath.
 
 ## What recurs
 
@@ -10,7 +10,7 @@ three different failure modes — and the same governance failures underneath.
   for its own actions."
 - **iTutorGroup** argued its tutors were contractors outside employment law, and let
   software make the rejection decisions.
-- **DPD** attributed the failure to "an error occurred after a system update" — a
+- **DPD** attributed the failure to "an error occurred after a system update", a
   cause without an owner.
 
 In each case, the organizational posture was distance, not accountability. Courts and
@@ -33,7 +33,7 @@ proportionate to the stakes: no policy-accuracy testing, no disparate-impact
 analysis, no adversarial testing.
 
 **Governance lesson:** Classify AI uses by consequence *before* deciding how much
-assurance they need. The question is never "is it AI?" — it's "what happens when
+assurance they need. The question is never "is it AI?", it's "what happens when
 it's wrong?"
 
 ### 3. Detection happened externally, not by a control
@@ -45,16 +45,16 @@ Not one of the three organizations detected its own failure through monitoring.
 Detective controls were absent in all three cases.
 
 **Governance lesson:** If your incident detection strategy is "wait for someone to
-sue us or go viral," you don't have one. Production monitoring — sampled review,
-anomaly flags, funnel analytics — is a governance requirement, not an engineering
+sue us or go viral," you don't have one. Production monitoring, sampled review,
+anomaly flags, funnel analytics: is a governance requirement, not an engineering
 nice-to-have.
 
 ### 4. The "AI" label obscured simple, testable failures
-- Air Canada's failure was **contradiction with its own policy page** — catchable by
+- Air Canada's failure was **contradiction with its own policy page**, catchable by
   any evaluation set built from company sources.
-- iTutorGroup's failure was **programmed age cutoffs** — catchable by basic
+- iTutorGroup's failure was **programmed age cutoffs**, catchable by basic
   selection-rate analysis (the 4/5ths rule).
-- DPD's failure was **trivial prompt manipulation** — catchable by a one-afternoon
+- DPD's failure was **trivial prompt manipulation**: catchable by a one-afternoon
   red-team pass.
 
 None required exotic AI safety research to prevent. All three were failures of
@@ -62,7 +62,7 @@ ordinary diligence applied to AI systems.
 
 **Governance lesson:** Most AI incidents are not alignment problems. They are
 testing, monitoring, and accountability problems wearing an AI costume. A governance
-program that does the basics — eval sets, funnel metrics, red-teaming, ownership —
+program that does the basics: eval sets, funnel metrics, red-teaming, ownership, 
 prevents the majority of real-world incidents.
 
 ### 5. Remediation was reactive in all three cases
@@ -76,7 +76,7 @@ assess → contain → remediate → retest → disclose. Rehearse the kill-swit
 ## The one-line summary
 
 > Every incident here was preventable with controls that already existed as standard
-> practice — the organizations just hadn't applied them to their AI systems.
+> practice: the organizations just hadn't applied them to their AI systems.
 
 That is the core argument for AI governance as a discipline: it is not about novel
 technology, but about extending accountability, testing, and monitoring to systems

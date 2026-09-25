@@ -8,16 +8,16 @@ template with a scaffolding script. A September 2026 sample brief
 ## Problem
 
 Policy-oriented governance roles expect analysts to translate law into
-internal guidance. That requires a visible, sustained tracking habit — not a
+internal guidance. That requires a visible, sustained tracking habit, not a
 one-time literature review. Hiring managers can spot the difference: a
 candidate who publishes a monthly brief has demonstrably done the work.
 
 ## Users / Stakeholders
 
-- **AI governance analyst** — researches and authors each brief.
-- **Legal / compliance** — validate implications and own follow-up actions.
-- **Governance committee** — receive the brief as a standing agenda input.
-- **Policy-minded hiring managers** — read the archive as proof of a
+- **AI governance analyst**: researches and authors each brief.
+- **Legal / compliance**: validate implications and own follow-up actions.
+- **Governance committee**: receive the brief as a standing agenda input.
+- **Policy-minded hiring managers**: read the archive as proof of a
   regulatory-tracking habit.
 
 ## Methods
@@ -29,7 +29,7 @@ candidate who publishes a monthly brief has demonstrably done the work.
   and a next-month watchlist. Illustrative placeholders are explicitly
   marked and must be resolved before publishing.
 - **Sample brief** ([briefs/2026-09-september.md](./briefs/2026-09-september.md)):
-  September 2026, clearly labeled **illustrative sample** — demonstrates
+  September 2026, clearly labeled **illustrative sample**, demonstrates
   the format, the EU/high-risk framing, and how findings connect back to
   the intake rubric, vendor checklist, and edtech assessment in this
   portfolio.
@@ -47,7 +47,7 @@ python3 new_brief.py 2026 10  # scaffold October 2026
 
 - A repeatable monthly cadence: ~30 minutes of research a week, one page a
   month, archived in [briefs/](./briefs/).
-- Each brief ends in **implications with owners and due dates** — tracking
+- Each brief ends in **implications with owners and due dates**, tracking
   without action items is just reading.
 - The sample shows the key analyst move: connecting a regulatory
   development to a concrete program change (e.g., "high-risk documentation

@@ -1,7 +1,7 @@
 # EU AI Act Risk-Tier Classifier
 
 A rule-based CLI that reads a "system card" describing an AI system and assigns
-an EU AI Act risk tier — **Prohibited, High-Risk, Limited Risk, or Minimal Risk** —
+an EU AI Act risk tier: **Prohibited, High-Risk, Limited Risk, or Minimal Risk**, 
 with matched categories, rationale, reviewer flags, and a tier-appropriate
 obligations checklist.
 
@@ -13,7 +13,7 @@ Risk-tiering is the first question in any AI governance workflow: it decides
 whether a system can be deployed at all (prohibited), needs a conformity
 assessment and EU database registration (high-risk), needs transparency
 disclosures (limited risk), or faces no mandatory duties (minimal risk).
-This tool makes that triage step explicit, repeatable, and reviewable — the
+This tool makes that triage step explicit, repeatable, and reviewable. The
 kind of boring-but-critical infrastructure that turns "we do AI governance"
 from a slogan into an auditable process.
 
@@ -48,7 +48,7 @@ A system card is a JSON object with these fields:
 ## How it works
 
 Rules match keywords/regex against all card fields. Precedence is strict:
-**Prohibited > High-Risk > Limited Risk > Minimal Risk** — the most severe
+**Prohibited > High-Risk > Limited Risk > Minimal Risk**: the most severe
 matched tier wins. When matches span multiple tiers, the report raises a
 "competing signals" reviewer flag so a human confirms which use case dominates.
 Deliberately ambiguous cards (see `examples/call_center_voice.json`) carry
@@ -99,7 +99,7 @@ Full demo output for all six examples is checked in at
 ## Disclaimer
 
 **This is an educational tool, not legal advice.** The keyword-to-tier mapping
-is deliberately simplified relative to the actual regulation text — the real
+is deliberately simplified relative to the actual regulation text, the real
 EU AI Act has exceptions, definitional thresholds, and case-by-case
 assessments that a regex cannot capture. Always verify real deployments
 against the official regulation and consult qualified counsel.

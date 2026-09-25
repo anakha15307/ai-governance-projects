@@ -71,8 +71,8 @@ def model_card(model: dict, datasets: dict) -> str:
 
     history_rows = []
     for h in model.get("approval_history", []):
-        actor = esc(h.get("actor") or "—")
-        note = f" — <em>{esc(h['note'])}</em>" if h.get("note") else ""
+        actor = esc(h.get("actor") or "-")
+        note = f" - <em>{esc(h['note'])}</em>" if h.get("note") else ""
         history_rows.append(
             f"<li><strong>{esc(h['action'])}</strong> by {actor} "
             f"({esc(h.get('from', '?'))} → {esc(h.get('to', '?'))}) · "
@@ -90,8 +90,8 @@ def model_card(model: dict, datasets: dict) -> str:
         <div class="badges">{badge(tier, TIER_COLORS.get(tier, '#333'))}
         {badge(status, STATUS_COLORS.get(status, '#333'))}</div>
       </div>
-      <p><strong>Owner:</strong> {esc(model.get('owner', '—'))}</p>
-      <p><strong>Intended use:</strong> {esc(model.get('intended_use', '—'))}</p>
+      <p><strong>Owner:</strong> {esc(model.get('owner', '-'))}</p>
+      <p><strong>Intended use:</strong> {esc(model.get('intended_use', '-'))}</p>
       <h3>Dataset lineage</h3>
       {lineage_html}
       <h3>Approval history</h3>
@@ -113,7 +113,7 @@ def build_html(store: dict) -> str:
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AI Model Registry — Lineage &amp; Approvals Report</title>
+<title>AI Model Registry: Lineage &amp; Approvals Report</title>
 <style>
   * {{ box-sizing: border-box; }}
   body {{ font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -139,14 +139,14 @@ def build_html(store: dict) -> str:
 </head>
 <body>
 <header>
-  <h1>AI Model Registry — Lineage &amp; Approvals Report</h1>
+  <h1>AI Model Registry: Lineage &amp; Approvals Report</h1>
   <p>{esc(summary)} · {len(datasets)} datasets registered</p>
   <p>Generated offline from the registry JSON store. No external data sources.</p>
 </header>
 <main>
 {cards if cards else "<p class=\"muted\">No models registered yet.</p>"}
 </main>
-<footer>AI governance portfolio project — model registry</footer>
+<footer>AI governance portfolio project: model registry</footer>
 </body>
 </html>
 """

@@ -2,8 +2,8 @@
 
 Per Playbook Chapter 10. Write before deployment; activate at go-decision.
 
-Use-case ID: [ORG-UC-NNN] — Name: [Name] — Tier: [1/2/3/4]
-Owner: [Use-case owner] — Analyst: [Name] — Effective: [YYYY-MM-DD]
+Use-case ID: [ORG-UC-NNN]. Name: [Name]. Tier: [1/2/3/4]
+Owner: [Use-case owner]. Analyst: [Name]. Effective: [YYYY-MM-DD]
 
 ## 1. What is monitored
 
@@ -38,9 +38,9 @@ Owner: [Use-case owner] — Analyst: [Name] — Effective: [YYYY-MM-DD]
 
 ## 5. Reporting
 
-- Findings to monthly risk review: [Yes — coordinator includes]
+- Findings to monthly risk review: [Yes, coordinator includes]
 - Metrics tracked: [sample pass rate, incident count, catch rate, open remediations…]
 
 ## 6. Plan review
 
-- This plan reviewed: [date] — next review: [YYYY-MM-DD, per tier interval]
+- This plan reviewed: [date], next review: [YYYY-MM-DD, per tier interval]

@@ -1,10 +1,10 @@
-# Monthly Regulatory Brief — Template
+# Monthly Regulatory Brief: Template
 
 > Copy via `python3 new_brief.py` and fill in from primary sources
 > (official gazettes, regulator publications, enacted bill texts).
 > See [README.md](./README.md).
 
-# AI Regulatory Brief — {{MONTH YEAR}}
+# AI Regulatory Brief - {{MONTH YEAR}}
 
 **Prepared:** {{DATE}} · **Author:** {{AUTHOR}} · **Status:** Draft / Final
 **Coverage:** EU AI Act implementation · US state AI laws · (optional) other jurisdictions
@@ -12,7 +12,7 @@
 ## Method note
 
 Sources consulted this month (list official sources; link where possible).
-Items marked *(illustrative)* are placeholders — never publish a brief with
+Items marked *(illustrative)* are placeholders: never publish a brief with
 illustrative items unresolved.
 
 ## 1. EU AI Act implementation
@@ -23,7 +23,7 @@ illustrative items unresolved.
 
 ### Upcoming obligations and dates
 
-| Obligation | Who it affects | Illustrative date — verify |
+| Obligation | Who it affects | Illustrative date: verify |
 |---|---|---|
 | | | |
 

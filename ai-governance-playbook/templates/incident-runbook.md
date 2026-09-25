@@ -1,9 +1,9 @@
 # AI Incident Runbook
 
-Per Playbook Chapter 11. Pre-delegate containment authority — do not convene
+Per Playbook Chapter 11. Pre-delegate containment authority, do not convene
 a committee while harm continues.
 
-Program: [Organization] — Version: [v1.0] — Date: [YYYY-MM-DD]
+Program: [Organization]. Version: [v1.0]. Date: [YYYY-MM-DD]
 Owner: [Program owner]
 
 ## Severity levels
@@ -27,7 +27,7 @@ When in doubt, escalate one level.
 
 ### 2. Contain
 
-- Pre-delegated containment authority: [Name/role — may pause use case immediately]
+- Pre-delegated containment authority: [Name/role, may pause use case immediately]
 - Containment options: [pause use case / roll back version / disable feature / revoke access]
 - Preserve logs and evidence: [what to snapshot, where]
 
@@ -35,7 +35,7 @@ When in doubt, escalate one level.
 
 - Scope: [who affected, for how long, what data involved]
 - Technical cause: [ ]
-- Governance cause: [which controls failed or were missing — P/D/C language]
+- Governance cause: [which controls failed or were missing. P/D/C language]
 
 ### 4. Notify
 
@@ -43,7 +43,7 @@ When in doubt, escalate one level.
 |---|---|---|---|
 | Internal leadership | SEV-2+ | [Name] | [e.g., 24h] |
 | Affected individuals | [per obligation] | [Name] | [per obligation] |
-| Regulator | [per obligation — know your clocks in advance] | Legal | [per obligation] |
+| Regulator | [per obligation: know your clocks in advance] | Legal | [per obligation] |
 | Vendor | [if vendor-caused] | [Name] | [per contract SLA] |
 
 ### 5. Remediate
@@ -54,7 +54,7 @@ When in doubt, escalate one level.
 ### 6. Learn
 
 - Post-incident review within 10 business days: [owner]
-- Filed: [location] — fed into training: [date]
+- Filed: [location], fed into training: [date]
 
 ## Contacts
 
@@ -67,5 +67,5 @@ When in doubt, escalate one level.
 
 ## Tabletop schedule
 
-- [ ] Annual tabletop completed: [date] — scenario: [description] — gaps found: [ ]
+- [ ] Annual tabletop completed: [date], scenario: [description], gaps found: [ ]
 - Next tabletop due: [YYYY-MM-DD]

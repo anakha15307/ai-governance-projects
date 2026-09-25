@@ -1,7 +1,7 @@
 # Model Registry
 
 A small, offline model registry that records **dataset lineage** and an
-**approval workflow** for every model version — the two things an auditor asks
+**approval workflow** for every model version: the two things an auditor asks
 about first. JSON-backed, standard library only, no network, no API keys.
 
 ## Why a registry? The governance rationale
@@ -16,13 +16,13 @@ visible, reviewable, and auditable.
   (see Annex IV and the conformity-assessment requirements). This registry is
   a minimal working model of that: every model records its intended use,
   its EU-style risk tier, and the datasets it was trained or fine-tuned on.
-- **NIST AI RMF — Govern function.** The RMF's GOVERN function calls for
+- **NIST AI RMF: Govern function.** The RMF's GOVERN function calls for
   accountability structures, risk-management policies, and oversight
   throughout the AI lifecycle. The registry's submit → review → approve
   workflow is GOVERN in miniature: no model ships without a named reviewer,
   a timestamp, and a written rationale.
-- **Lineage is the hard part of AI forensics.** When a model misbehaves —
-  biased outputs, leaked training data — the first question is "what was it
+- **Lineage is the hard part of AI forensics.** When a model misbehaves, 
+  biased outputs, leaked training data: the first question is "what was it
   trained on?" This registry answers that in one command (`show`).
 
 ## Data model

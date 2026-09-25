@@ -22,8 +22,8 @@ while controlling data leakage, legal, quality, and reputational risk.
 ## 2. Scope
 
 Applies to all employees, contractors, and temporary staff ("users") who use
-GenAI tools — including chatbots, coding assistants, image generators, and
-GenAI features embedded in business software — for any work purpose, on any
+GenAI tools: including chatbots, coding assistants, image generators, and
+GenAI features embedded in business software: for any work purpose, on any
 device.
 
 Consumer-grade GenAI accounts used for personal purposes are out of scope,

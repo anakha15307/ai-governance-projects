@@ -14,12 +14,12 @@ contract terms.
 
 ## Users / Stakeholders
 
-- **AI governance analyst** — completes the checklist per tool.
-- **Procurement** — runs the commercial process; needs the assessment to
+- **AI governance analyst**: completes the checklist per tool.
+- **Procurement**: runs the commercial process; needs the assessment to
   negotiate terms.
-- **Legal / privacy / security** — own the DPA, attestation, and contract
+- **Legal / privacy / security**: own the DPA, attestation, and contract
   findings.
-- **Business requestor** — waits on the rating before rollout.
+- **Business requestor**: waits on the rating before rollout.
 
 ## Methods
 
@@ -31,7 +31,7 @@ contract terms.
 - **Completed sample** ([public-tool-review.md](./public-tool-review.md)):
   ChatGPT (OpenAI) assessed for an illustrative internal-productivity scope,
   based solely on publicly available information. Result: **Approved with
-  conditions** — enterprise-tier DPA, no-training-on-data confirmation,
+  conditions**: enterprise-tier DPA, no-training-on-data confirmation,
   SSO enforcement, and legal review of IP/indemnity terms required before
   rollout. Explicitly not approved for confidential data or decisions about
   individuals in this sample.
@@ -45,7 +45,7 @@ contract terms.
   security questionnaires miss (training-data use, model versioning, EU AI
   Act role allocation, output IP).
 - A worked example showing how to turn public information into a structured,
-  caveated finding set — and how to write remediation with owners and dates
+  caveated finding set: and how to write remediation with owners and dates
   instead of vague concerns.
 - Clear scope discipline: the sample rates the tool for one defined use
   case, not as a blanket approval.

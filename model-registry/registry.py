@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Model Registry CLI — dataset lineage and approval workflow for AI governance.
+"""Model Registry CLI: dataset lineage and approval workflow for AI governance.
 
 A tiny, offline model registry backed by a single JSON file. It answers two
 questions every AI governance program must be able to answer at audit time:
@@ -246,7 +246,7 @@ def cmd_show(args: argparse.Namespace) -> None:
         print("  (none)")
     for h in model["approval_history"]:
         actor = h["actor"] or "-"
-        note = f" — {h['note']}" if h["note"] else ""
+        note = f" - {h['note']}" if h["note"] else ""
         print(f"  - {h['timestamp']}: {h['action']} by {actor} ({h['from']} -> {h['to']}){note}")
 
 

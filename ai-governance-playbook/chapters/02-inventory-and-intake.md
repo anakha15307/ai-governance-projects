@@ -12,19 +12,19 @@ on every new, changed, or discovered use case.
 
 A use case = one AI system + one purpose + one deployment context. "Our
 support chatbot" and "the same model summarizing internal meetings" are two
-use cases — different people affected, different risks. Record each
+use cases: different people affected, different risks. Record each
 separately.
 
-### 2. Build the initial inventory (weeks 1–4)
+### 2. Build the initial inventory (weeks 1-4)
 
 You will not find everything by asking. Combine:
 
-1. **Survey** engineering, product, data science, marketing, HR, support —
+1. **Survey** engineering, product, data science, marketing, HR, support, 
    "what tools with AI features did you adopt or build in the last 12 months?"
-2. **Procurement records** — search for AI/ML/copilot/chatbot/assistant in
+2. **Procurement records**: search for AI/ML/copilot/chatbot/assistant in
    vendor contracts and expense reports.
-3. **IT/SaaS audit** — browser extensions, SaaS marketplaces, API keys.
-4. **Interviews** — the survey misses shadow AI; 5–6 conversations with team
+3. **IT/SaaS audit**: browser extensions, SaaS marketplaces, API keys.
+4. **Interviews**: the survey misses shadow AI; 5-6 conversations with team
    leads surface what surveys don't.
 
 Minimum inventory fields: use-case ID, name, owner, description, tier
@@ -36,8 +36,8 @@ Minimum inventory fields: use-case ID, name, owner, description, tier
 1. **Owner submits** [`templates/use-case-intake.md`](../templates/use-case-intake.md).
 2. **Coordinator triages weekly:** completeness check → assign tier
    (Chapter 3) → scope the assessment.
-3. **Analyst assesses** per the tier's requirements (Chapters 3–4).
-4. **Register updated** — nothing is "in the program" until it's in the
+3. **Analyst assesses** per the tier's requirements (Chapters 3-4).
+4. **Register updated**: nothing is "in the program" until it's in the
    inventory with an owner and a tier.
 
 ### 4. Scope the use case and its boundaries
@@ -53,7 +53,7 @@ Before assessing, write down what the use case *is and isn't*:
   accepted as evidence of infrastructure controls, not of model behavior").
 
 Scope creep is the assessment-killer: if the boundary isn't written down, the
-assessment quietly expands until it's never finished — or quietly shrinks
+assessment quietly expands until it's never finished, or quietly shrinks
 until it misses the actual risk.
 
 ### 5. Handle shadow AI
@@ -67,12 +67,12 @@ teaches people to hide things.
 ## Worked mini-example (illustrative)
 
 *Meridian Logistics* inventories 14 AI uses in three weeks; 6 are SaaS
-features nobody had registered (meeting summarizers, an HR resume screener —
+features nobody had registered (meeting summarizers, an HR resume screener, 
 immediately tiered high, Chapter 3). The sales chatbot ("Relay") gets use-case
-ID **ML-UC-007**. Scoping for Relay: *in scope* — the vendor chatbot drafting
+ID **ML-UC-007**. Scoping for Relay: *in scope*, the vendor chatbot drafting
 customer replies in the support queue, the ticket text it reads, the agents
-who approve drafts; *out of scope* — the vendor's analytics dashboard and any
-future voice deployment; *assumption* — vendor's uptime and infrastructure
+who approve drafts; *out of scope*: the vendor's analytics dashboard and any
+future voice deployment; *assumption*: vendor's uptime and infrastructure
 claims accepted, model behavior claims not accepted without testing.
 
 ## Common pitfalls
@@ -92,7 +92,7 @@ claims accepted, model behavior claims not accepted without testing.
 
 ## Repo tooling
 
-- [`ai-use-case-intake/`](../../ai-use-case-intake/) — intake form, triage
+- [`ai-use-case-intake/`](../../ai-use-case-intake/), intake form, triage
   rubric, and triage CLI implementing this chapter's process.
-- [`model-registry/`](../../model-registry/) — registry with lineage and
+- [`model-registry/`](../../model-registry/), registry with lineage and
   approval workflow for the inventory's model layer.

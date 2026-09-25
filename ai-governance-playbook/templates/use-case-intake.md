@@ -13,7 +13,7 @@ See Playbook Chapter 2 (Inventory and Intake).
 ## 2. Use-case description
 
 - Working name: [Name]
-- What does it do? [2–3 sentences, plain language]
+- What does it do? [2-3 sentences, plain language]
 - What problem does it solve? [Business problem]
 - Who is affected by its outputs or decisions? [Customers, employees, applicants…]
 - Is this new, a material change to an existing use case, or a discovered ("shadow") use? [New / Change / Discovered]
@@ -30,7 +30,7 @@ See Playbook Chapter 2 (Inventory and Intake).
 
 ## 4. Human involvement
 
-- What role does a human play? [In-the-loop / On-the-loop / Out-of-the-loop — see Ch. 7]
+- What role does a human play? [In-the-loop / On-the-loop / Out-of-the-loop, see Ch. 7]
 - Describe the human decision point (if any): [What the human sees, approves, or can override]
 - Estimated human review workload: [Items per day per reviewer]
 
@@ -43,7 +43,7 @@ See Playbook Chapter 2 (Inventory and Intake).
 
 ## 6. Known risks or concerns
 
-- [Anything that worries you — be candid; this helps, it doesn't hurt]
+- [Anything that worries you: be candid; this helps, it doesn't hurt]
 
 ## 7. Requester attestation
 
@@ -57,6 +57,6 @@ Signature: [Name] Date: [YYYY-MM-DD]
 **For governance use (triage):**
 
 - Use-case ID assigned: [ORG-UC-NNN]
-- Tier assigned: [1 / 2 / 3 / 4] — worksheet: [link]
+- Tier assigned: [1 / 2 / 3 / 4], worksheet: [link]
 - Assessment scope: [Standard / Light / Full]
-- Analyst assigned: [Name] — due: [YYYY-MM-DD]
+- Analyst assigned: [Name], due: [YYYY-MM-DD]

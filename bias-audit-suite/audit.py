@@ -173,7 +173,7 @@ def render_markdown(report: dict) -> str:
     L: list[str] = []
     add = L.append
 
-    add("# Fairness Report Card — Bias Audit Suite")
+    add("# Fairness Report Card: Bias Audit Suite")
     add("")
     add(f"_Generated {report['generated_at']} · {report['n_prompts']} prompts · "
         f"models: {', '.join(report['models'])}_")
@@ -203,7 +203,7 @@ def render_markdown(report: dict) -> str:
         add("")
         add(f"**What it measures:** {biased['description']}")
         add("")
-        add(f"**Severity: {biased['severity']}** — {INTERPRETATIONS[biased['severity']]}")
+        add(f"**Severity: {biased['severity']}**, {INTERPRETATIONS[biased['severity']]}")
         add("")
         add(f"- Primary metric: {biased['primary_metric']} = "
             f"{biased['primary_value']:.2f} (baseline "
@@ -212,11 +212,11 @@ def render_markdown(report: dict) -> str:
             add(f"- Disparity vs neutral baseline: "
                 f"{biased['disparity_vs_baseline']:.2f}")
         add("")
-        add("### Breakdown — BiasedStub")
+        add("### Breakdown: BiasedStub")
         add("")
         add(_breakdown_table(probe_id, biased["breakdown"]))
         add("")
-        add("### Breakdown — NeutralStub (baseline)")
+        add("### Breakdown: NeutralStub (baseline)")
         add("")
         add(_breakdown_table(probe_id, neutral["breakdown"]))
         add("")

@@ -35,7 +35,7 @@ follows the worst material finding.
 | # | Item | Rating | Evidence |
 |---|---|---|---|
 | C1 | Model identity and version disclosed; change notification process exists | | |
-| C2 | Evaluation results shared (accuracy, safety, or fairness — relevant to the use case) | | |
+| C2 | Evaluation results shared (accuracy, safety, or fairness, relevant to the use case) | | |
 | C3 | Known limitations documented (model card or equivalent) | | |
 | C4 | Content safety controls described (filters, refusal behavior) | | |
 | C5 | Human-oversight hooks available where the use case needs them | | |

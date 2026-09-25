@@ -1,10 +1,10 @@
-# RACI Chart — AI Governance Program
+# RACI Chart: AI Governance Program
 
 Per Playbook Chapter 1. Fill in a workshop with the actual people.
-R = Responsible (does it), A = Accountable (owns it — exactly one per row),
+R = Responsible (does it), A = Accountable (owns it, exactly one per row),
 C = Consulted, I = Informed.
 
-Program: [Organization] — Date: [YYYY-MM-DD] — Version: [v1.0]
+Program: [Organization]. Date: [YYYY-MM-DD]. Version: [v1.0]
 
 | Activity | Exec sponsor | Program owner | Coordinator | Analyst | Use-case owner | Control owners | Legal / Security |
 |---|---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Program: [Organization] — Date: [YYYY-MM-DD] — Version: [v1.0]
 | Risk assessment | I | A | C | R | C | C | C |
 | Control selection & assignment | I | A | C | R | R | A* | C |
 | Deployment decision (T2) | I | A/R | C | R | C | I | I |
-| Deployment decision (T3–4) | A† | R | C | R | C | I | C |
+| Deployment decision (T3-4) | A† | R | C | R | C | I | C |
 | Policy drafting & updates | I | A | R | R | C | C | C |
 | Training delivery | I | A | R | C | I | I | I |
 | Monitoring & metrics | I | A | R | R | C | R‡ | I |
@@ -36,4 +36,4 @@ Program: [Organization] — Date: [YYYY-MM-DD] — Version: [v1.0]
 | Legal contact | [ ] |
 | Security contact | [ ] |
 
-Reviewed: [date] — next review: [YYYY-MM-DD, annual or on reorg]
+Reviewed: [date], next review: [YYYY-MM-DD, annual or on reorg]

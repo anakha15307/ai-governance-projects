@@ -1,28 +1,28 @@
 # Chapter 1: Program Setup
 
 **Purpose:** Establish who owns AI governance, what authority they have, and
-how the program runs week to week — before any use case is assessed.
+how the program runs week to week: before any use case is assessed.
 
 **When to use it:** First, when standing up the program; revisit annually or
 after a reorganization.
 
 ## Procedure
 
-### 1. Draft the governance charter (1–2 pages)
+### 1. Draft the governance charter (1-2 pages)
 
 The charter is the program's founding document. It must answer five questions:
 
-1. **Scope** — which AI uses are governed? (Recommendation: all AI that makes
+1. **Scope**: which AI uses are governed? (Recommendation: all AI that makes
    or influences decisions affecting people, handles personal data, or
-   represents the company externally — including procured tools and "shadow
+   represents the company externally: including procured tools and "shadow
    AI" pilots. Explicitly exclude nothing by accident: say what is *out* of
    scope, e.g., spellcheck.)
-2. **Authority** — what can governance stop? The program must be able to pause
+2. **Authority**: what can governance stop? The program must be able to pause
    a deployment pending review. A governance body that can only advise will be
    routed around.
-3. **Roles** — who does what (see §3).
-4. **Cadence** — the operating rhythm (see §4).
-5. **Escalation** — what happens when a use-case owner disagrees with a
+3. **Roles**: who does what (see §3).
+4. **Cadence**: the operating rhythm (see §4).
+5. **Escalation**: what happens when a use-case owner disagrees with a
    finding (see step 4).
 
 Keep it short. A ten-page charter won't be read; a two-page charter gets
@@ -49,7 +49,7 @@ small program, but never let the use-case owner be their own assessor.
 Use [`templates/raci-chart.md`](../templates/raci-chart.md). Minimum viable
 RACI covers: intake triage, risk assessment, control assignment, deployment
 decision, incident response, and policy exception. Fill it in a workshop with
-the actual people — a RACI written by one person in a vacuum is fiction.
+the actual people: a RACI written by one person in a vacuum is fiction.
 
 ### 4. Set the operating cadence
 
@@ -64,7 +64,7 @@ the actual people — a RACI written by one person in a vacuum is fiction.
 
 Disagreements are normal: an owner will dispute a tier, a finding, a timeline.
 The charter should state: analyst findings stand unless overturned in writing
-by the program owner (tiers 1–2) or the governance committee (tiers 3–4),
+by the program owner (tiers 1-2) or the governance committee (tiers 3-4),
 with the rationale recorded in the decision log. Silent overrides are how
 programs die.
 
@@ -75,10 +75,10 @@ standing up governance after a sales team pilots an AI chatbot without review.
 The COO signs a two-page charter: scope covers all customer-facing AI and any
 model touching employee or customer personal data; the program owner (Head of
 Risk) can pause deployments pending review; cadence is weekly triage, monthly
-risk review, quarterly committee. The chatbot pilot's owner — the sales
-director — becomes the use-case owner and must submit a retroactive intake
+risk review, quarterly committee. The chatbot pilot's owner, the sales
+director: becomes the use-case owner and must submit a retroactive intake
 (Chapter 2). The first RACI workshop takes 45 minutes and surfaces that nobody
-owns model monitoring — which becomes the program's first gap to close.
+owns model monitoring: which becomes the program's first gap to close.
 
 ## Common pitfalls
 

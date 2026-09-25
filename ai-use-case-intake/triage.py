@@ -55,10 +55,10 @@ DIMENSIONS = [
 
 # (min_score, track_label, sla_business_days, description)
 TRACKS = [
-    (12, "D — Critical", 2, "Executive + legal review; deployment hold until cleared."),
-    (8, "C — Elevated", 3, "Full risk assessment required; committee review."),
-    (4, "B — Standard", 5, "Governance analyst review; light documentation."),
-    (0, "A — Minimal", 10, "Notify-only; log in registry; no formal review."),
+    (12, "D: Critical", 2, "Executive + legal review; deployment hold until cleared."),
+    (8, "C: Elevated", 3, "Full risk assessment required; committee review."),
+    (4, "B: Standard", 5, "Governance analyst review; light documentation."),
+    (0, "A: Minimal", 10, "Notify-only; log in registry; no formal review."),
 ]
 
 AUTO_TRACK_D_FLAGS = [
@@ -70,7 +70,7 @@ AUTO_TRACK_D_FLAGS = [
 
 def assign_track(scores: dict[str, int], auto_critical: bool) -> tuple[str, int, str]:
     if auto_critical:
-        return "D — Critical", 2, "Automatic Track D trigger applied (score-independent)."
+        return "D: Critical", 2, "Automatic Track D trigger applied (score-independent)."
     total = sum(scores.values())
     for min_score, label, sla, desc in TRACKS:
         if total >= min_score:
@@ -163,8 +163,8 @@ def main() -> int:
         meta = {
             "name": "Illustrative demo: HR policy Q&A chatbot",
             "description": "Internal chatbot answering employee questions about HR policies using an approved enterprise LLM.",
-            "requestor": "Illustrative requestor — People team",
-            "business_owner": "Illustrative owner — CHRO",
+            "requestor": "Illustrative requestor: People team",
+            "business_owner": "Illustrative owner: CHRO",
             "stage": "idea",
             "notes": "Illustrative sample entry added by --demo.",
         }
