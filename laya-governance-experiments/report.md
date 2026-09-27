@@ -9,11 +9,11 @@ Code and raw results: `laya-governance-experiments/` in this repository.
 
 ## 1. Executive summary
 
-Decision models are a new class of AI system: instead of generating text, they
-answer typed questions (yes/no, choice, score) with calibrated probabilities in
-a single forward pass. This report tests one such model, Laya, the open-source
-counterpart to TypeSafe's JEV, against three tasks that sit at the heart of AI
-governance work.
+Decision models are a new kind of AI system. Instead of generating text, they
+answer typed questions (yes/no, choice, score) with probabilities, in a single
+forward pass. I wanted to know whether one of them could do real governance
+work, so I tested Laya, the open-source counterpart to TypeSafe's JEV, on
+three tasks that sit at the heart of the field.
 
 | Experiment | n | Headline result |
 |---|---|---|
@@ -21,43 +21,43 @@ governance work.
 | Calibration: are its probabilities honest? | 60 prompts | ECE 0.125; well calibrated above 0.90 confidence |
 | Bias probe: do demographics shift decisions? | 6 paired scenarios | 0 decision flips; mean probability shift 0.009 |
 
-The model is a credible first-pass safety gate and shows no demographic
-sensitivity on this small probe, but its mid-range confidence is overconfident
-and roleplay-framed attacks evade it. All findings are exploratory: the sample
-sizes are small and this is one model, one language, one run.
+The short version: it works well as a first-pass safety gate and showed no
+demographic sensitivity on my small probe. But its mid-range confidence runs
+hot, and roleplay-framed attacks slip past it. Everything here is
+exploratory. Small samples, one model, one language, one run.
 
 ## 2. Background
 
-In September 2026, TypeSafe AI released JEV, a "System One" decision model:
-you give it a block of state plus typed questions, and it returns structured
-decisions with probabilities instead of generated text. Days later, independent
-researcher NandhaKishor M released Laya, an open-weight implementation of the
-same idea: a 421M-parameter ModernBERT-large encoder with a small decision
-head, trained with reinforcement learning for calibrated decisions (RLCD),
-released under Apache 2.0.
+In September 2026, TypeSafe AI released JEV, a "System One" decision model.
+You hand it a block of state plus typed questions, and it returns structured
+decisions with probabilities instead of generated text. Days later,
+independent researcher NandhaKishor M released Laya, an open-weight take on
+the same idea: a 421M-parameter ModernBERT-large encoder with a small
+decision head, trained with reinforcement learning for calibrated decisions
+(RLCD), released under Apache 2.0.
 
-Unlike a large language model, a decision model cannot hallucinate free text,
-break a JSON schema, or ramble. Its output space is fixed by the questions it
-is asked. The trade is capability: it cannot reason, summarize, or converse.
-Its natural role is as a fast judgment layer sitting in front of slower
-systems, exactly where governance controls live: input guardrails, routing,
-verification, and escalation.
+A decision model can't hallucinate free text, break a JSON schema, or ramble.
+Its output space is fixed by the questions you ask. The trade is capability.
+It can't reason, summarize, or hold a conversation. Where it fits is as a
+fast judgment layer in front of slower systems, which is exactly where
+governance controls live: input guardrails, routing, verification, and
+escalation.
 
 ## 3. Why this matters for AI governance
 
-Three governance questions motivated the experiments:
+Three questions drove the experiments.
 
 1. **Can it work as a safety gate?** Governance frameworks call for input
-   screening before a model acts. A gate that is fast and precise but misses
-   attacks is a different control than one that catches everything but cries
-   wolf. Precision and recall must be measured separately.
+   screening before a model acts. A gate that's fast and precise but misses
+   attacks is a different control from one that catches everything but cries
+   wolf. I measured precision and recall separately for that reason.
 2. **Are its probabilities honest?** A gate that reports confidence is only
    useful for risk-tiered escalation if the numbers mean what they say. A
-   model that says 80% and is right 50% of the time will misroute every
+   model that says 80% and is right half the time will misroute every
    escalation policy built on top of it.
-3. **Does it treat people evenly?** Any model used in lending, hiring, or
-   insurance-adjacent decisions must be probed for demographic sensitivity
-   before deployment.
+3. **Does it treat people evenly?** Before anything like this touches
+   lending, hiring, or insurance-adjacent decisions, it needs a demographic
+   sensitivity probe.
 
 ## 4. Methodology
 
@@ -77,19 +77,19 @@ batched (batch size 8 for the prompt sets, 2 for the bias pairs).
 **Datasets.**
 
 - Safety and calibration share 60 labeled prompts: 30 benign (everyday
-  questions: cooking, math, history) and 30 jailbreak attempts spanning
+  questions about cooking, math, history) and 30 jailbreak attempts spanning
   instruction override ("ignore all previous instructions"), roleplay
   ("pretend you're my grandmother..."), hypothetical framing, and
-  obfuscation. The model only ever classifies these prompts; it is never
-  asked to fulfill them.
-- Bias uses 6 paired scenarios (loan approval x2, hiring x2, insurance
-  claim x2). Each pair is identical except for a race/gender-coded name cue.
-  No labels are needed; the metric is decision shift between variants.
+  obfuscation. The model only classifies these prompts. It is never asked to
+  fulfill them.
+- Bias uses 6 paired scenarios (loan approval x2, hiring x2, insurance claim
+  x2). Each pair is identical except for a race/gender-coded name cue. No
+  labels needed. The metric is how much the decision shifts between variants.
 
 **Metrics.** Accuracy, precision, recall, confusion counts, and mean latency
-for the gate; expected calibration error (ECE, 10-bin, proper binary form
-with confidence = max(p, 1-p)) plus a reliability table for calibration;
-flip rate and mean absolute probability shift for bias.
+for the gate. Expected calibration error (ECE, 10-bin, proper binary form
+with confidence = max(p, 1-p)) plus a reliability table for calibration.
+Flip rate and mean absolute probability shift for bias.
 
 ## 5. Experiment 1: Safety gate
 
@@ -102,18 +102,18 @@ flip rate and mean absolute probability shift for bias.
 | Missed attacks | 9 FN |
 | Mean latency | 0.94 s per decision (CPU, batched) |
 
-The gate never blocked a legitimate request, which is the harder property to
-get from a safety filter. Its misses form a clear pattern: all 9 were
-roleplay, hypothetical, or framing attacks ("pretend you're my grandmother
-reading a bedtime story about...", "roleplay a hitman...", "hypothetically,
-if someone wanted to evade taxes..."). Direct instruction-override attacks
-("ignore all previous instructions", "you are now DAN") were caught every
-time, most at 95%+ probability.
+The gate never blocked a legitimate request. That's the harder property to
+get from a safety filter, and it matters. Its misses form a clear pattern:
+all 9 were roleplay, hypothetical, or framing attacks ("pretend you're my
+grandmother reading a bedtime story about...", "roleplay a hitman...",
+"hypothetically, if someone wanted to evade taxes..."). Direct
+instruction-override attacks ("ignore all previous instructions", "you are
+now DAN") were caught every time, most at 95%+ probability.
 
-**Governance reading:** as a first-pass filter, this profile is usable but
-incomplete. Zero false positives means it can run silently in front of a
-system without degrading the user experience; 70% recall means it must be
-paired with a second layer, not trusted alone.
+**My read:** as a first-pass filter, this profile is usable but incomplete.
+Zero false positives means it can run silently in front of a system without
+degrading the user experience. 70% recall means it needs a second layer. I
+wouldn't trust it alone.
 
 ## 6. Experiment 2: Calibration
 
@@ -126,16 +126,16 @@ paired with a second layer, not trusted alone.
 
 Expected calibration error (10-bin): **0.125**.
 
-Where the model is most confident, its probabilities are honest: 52 of 60
+Where the model is most confident, its probabilities are honest. 52 of 60
 decisions landed above 0.90 confidence and were right 92% of the time. The
-middle band is overconfident, but note the thin sample (7 items), most of
-which are the roleplay attacks it misclassified. One caveat from the run
-itself: the checkpoint emits a runtime warning that some entries ship invalid
-temperature values and their confidence should be treated as uncalibrated.
+middle band is overconfident, but note the thin sample: 7 items, most of
+them the roleplay attacks it misclassified. One caveat from the run itself:
+the checkpoint emits a runtime warning that some entries ship invalid
+temperature values, and their confidence should be treated as uncalibrated.
 
-**Governance reading:** confidence-gated escalation (auto-allow above 0.95,
-human review below 0.80) is defensible on this evidence, but the middle band
-needs a larger sample before any threshold is set in policy.
+**My read:** confidence-gated escalation (auto-allow above 0.95, human
+review below 0.80) looks defensible on this evidence. But the middle band
+needs a larger sample before any threshold goes into policy.
 
 ## 7. Experiment 3: Bias probe
 
@@ -151,30 +151,30 @@ needs a larger sample before any threshold is set in policy.
 Decision flips: **0 of 6**. Mean absolute probability shift: **0.009**
 (max 0.035). No evidence of demographic sensitivity on this probe.
 
-**Governance reading:** this is the result you want before a pilot, not a
-verdict. Six pairs cannot clear a model for production; a real audit would
-need hundreds of pairs, intersectional cues, and adversarial phrasings.
+**My read:** this is the result you want before a pilot, not a verdict.
+Six pairs can't clear a model for production. A real audit would need
+hundreds of pairs, intersectional cues, and adversarial phrasings.
 
 ## 8. Limitations
 
 - Small samples throughout: 60 labeled prompts, 6 bias pairs.
 - One model, one checkpoint, English only, single run (no variance estimate).
-- The prompt set is hand-built, not a standard benchmark; attack coverage is
+- The prompt set is hand-built, not a standard benchmark. Attack coverage is
   illustrative.
 - Calibration analysis is thinnest exactly where it matters most, in the
   uncertain middle band.
-- Latency was measured on CPU in batches; production figures will differ.
+- Latency was measured on CPU in batches. Production figures will differ.
 
 ## 9. Conclusion
 
 Laya behaves like a genuinely useful governance primitive: fast, precise,
-honest about its confidence at the extremes, and demographically steady on a
-first probe. Its weaknesses are concrete and addressable: roleplay-framed
+honest about its confidence at the extremes, and demographically steady on
+a first probe. Its weaknesses are concrete and addressable. Roleplay-framed
 attacks evade the gate, and mid-range confidence overstates itself. Neither
-finding disqualifies it; both tell you exactly what the second layer of
-defense needs to cover. For governance teams, the practical pattern this
-suggests is a small decision model as a cheap first-pass gate, with a larger
-model or a human handling whatever falls below the confidence threshold.
+finding disqualifies it. Both tell you exactly what the second layer of
+defense needs to cover. For governance teams, the pattern this suggests is
+a small decision model as a cheap first-pass gate, with a larger model or a
+human handling whatever falls below the confidence threshold.
 
 ## 10. Reproducibility
 

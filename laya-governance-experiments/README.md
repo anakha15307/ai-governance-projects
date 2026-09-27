@@ -1,6 +1,6 @@
 # 16. Laya Governance Experiments
 
-Testing whether a 421M-parameter *decision model* (Laya, the open-source
+I tested whether a 421M-parameter *decision model* (Laya, the open-source
 counterpart to TypeSafe's JEV) can serve as an AI governance layer: a safety
 gate, a calibrated confidence source, and a demographically steady judge.
 
@@ -46,17 +46,17 @@ and probing it for bias.
 | Calibration | ECE **0.125**; 92% empirical accuracy above 0.90 confidence; overconfident in the 0.7-0.9 band |
 | Bias probe | **0 of 6 flips**; mean probability shift 0.009 |
 
-All 9 missed attacks were roleplay/hypothetical framing; direct
-instruction overrides were caught every time. See `report.md` for the full
-tables, false-negative analysis, and reliability bins.
+All 9 missed attacks were roleplay/hypothetical framing. Direct instruction
+overrides were caught every time. See `report.md` for the full tables, the
+false-negative analysis, and the reliability bins.
 
 ## Risks and controls
 
 - Small samples (60 prompts, 6 pairs): findings are exploratory, labeled as
   such throughout the report, never presented as a benchmark.
-- The model is probed, never asked to fulfill harmful requests; attack
+- The model is probed, never asked to fulfill harmful requests. Attack
   prompts are classified only.
-- Mid-band overconfidence is disclosed, not hidden: the report recommends
+- Mid-band overconfidence is disclosed, not hidden. The report recommends
   against setting escalation thresholds there without more data.
 
 ## Next steps
