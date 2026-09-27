@@ -1,0 +1,539 @@
+{
+  "seats": [
+    {
+      "id": "seat-a",
+      "label": "Gemini 3.8 Flash",
+      "model": "gemini-3.8-flash"
+    },
+    {
+      "id": "seat-b",
+      "label": "gpt-oss 120B",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "seat-c",
+      "label": "Ling 3.0 Flash",
+      "model": "inclusionai/ling-3.0-flash-sante:free"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-01",
+      "title": "CV-screening AI for hiring",
+      "ground_truth": "High-Risk",
+      "ground_truth_basis": "Annex III: AI systems used for recruitment and employment decisions (evaluation of candidates).",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "High-Risk",
+            "confidence": 0.99,
+            "justification": "Under Annex III, Section 4(a) of the EU AI Act, AI systems intended to be used for the recruitment or selection of natural persons, specifically to filter applications and evaluate candidates, are explicitly designated as high-risk. The automated scoring and shortlisting of applicants directly impacts individuals' access to employment opportunities.",
+            "key_factors": [
+              "Annex III, Section 4(a) classification",
+              "Employment and recruitment context",
+              "Automated candidate filtering and scoring"
+            ],
+            "raw": "{\"tier\":\"High-Risk\",\"confidence\":0.99,\"justification\":\"Under Annex III, Section 4(a) of the EU AI Act, AI systems intended to be used for the recruitment or selection of natural persons, specifically to filter applications and evaluate candidates, are explicitly designated as high-risk. The automated scoring and shortlisting of applicants directly impacts individuals' access to employment opportunities.\",\"key_factors\":[\"Annex III, Section 4(a) classification\",\"Employment and recruitment context\",\"Automated candidate filtering and scoring\"]}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.96,
+            "justification": "The system automatically evaluates and shortlists candidates for employment, directly affecting access to work, which the EU AI Act classifies as a high\u2011risk AI application.",
+            "key_factors": [
+              "automated recruitment decision",
+              "impact on employment opportunities",
+              "scoring and shortlisting of candidates",
+              "processing of personal data (CVs)",
+              "potential for bias and discrimination"
+            ],
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.96,\n  \"justification\": \"The system automatically evaluates and shortlists candidates for employment, directly affecting access to work, which the EU AI Act classifies as a high\u2011risk AI application.\",\n  \"key_factors\": [\n    \"automated recruitment decision\",\n    \"impact on employment opportunities\",\n    \"scoring and shortlisting of candidates\",\n    \"processing of personal data (CVs)\",\n    \"potential for bias and discrimination\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "The AI system is used for recruitment and candidate selection, which falls under Annex III, Section 1 of the EU AI Act as an AI system intended to be used in the context of employment and making decisions concerning individuals' access to employment.",
+            "key_factors": [
+              "Employment and recruitment context",
+              "Automated candidate scoring and shortlisting",
+              "Annex III Section 1 (employment/worker management)",
+              "Significant impact on individuals' job opportunities"
+            ],
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.95, \"justification\": \"The AI system is used for recruitment and candidate selection, which falls under Annex III, Section 1 of the EU AI Act as an AI system intended to be used in the context of employment and making decisions concerning individuals' access to employment.\", \"key_factors\": [\"Employment and recruitment context\", \"Automated candidate scoring and shortlisting\", \"Annex III Section 1 (employment/worker management)\", \"Significant impact on individuals' job opportunities\"]}"
+          }
+        },
+        "round2": {}
+      },
+      "council_verdict": "High-Risk",
+      "unanimous_round1": true
+    },
+    {
+      "id": "case-02",
+      "title": "Customer-support FAQ chatbot",
+      "ground_truth": "Limited Risk",
+      "ground_truth_basis": "Transparency obligation: users must be informed they are interacting with an AI system; not high-risk per Annex III.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "Limited Risk",
+            "confidence": 0.95,
+            "justification": "The system interacts directly with natural persons, triggering transparency obligations under Article 50 of the EU AI Act to ensure users are informed they are communicating with an AI.",
+            "key_factors": [
+              "Direct human-AI interaction",
+              "Article 50 transparency obligations",
+              "Customer service application",
+              "Absence of high-risk classification criteria"
+            ],
+            "raw": "{\"tier\": \"Limited Risk\", \"confidence\": 0.95, \"justification\": \"The system interacts directly with natural persons, triggering transparency obligations under Article 50 of the EU AI Act to ensure users are informed they are communicating with an AI.\", \"key_factors\": [\"Direct human-AI interaction\", \"Article 50 transparency obligations\", \"Customer service application\", \"Absence of high-risk classification criteria\"]}"
+          },
+          "seat-b": {
+            "tier": "Limited Risk",
+            "confidence": 0.85,
+            "justification": "The chatbot provides general product and shipping information to consumers and does not influence safety\u2011critical decisions or vulnerable groups, placing it outside the high\u2011risk scope but still subject to transparency obligations.",
+            "key_factors": [
+              "User\u2011facing interaction",
+              "Non\u2011critical informational purpose",
+              "No biometric or safety impact",
+              "No vulnerable population targeting",
+              "Potential for misinformation but limited scope"
+            ],
+            "raw": "{\n  \"tier\": \"Limited Risk\",\n  \"confidence\": 0.85,\n  \"justification\": \"The chatbot provides general product and shipping information to consumers and does not influence safety\u2011critical decisions or vulnerable groups, placing it outside the high\u2011risk scope but still subject to transparency obligations.\",\n  \"key_factors\": [\n    \"User\u2011facing interaction\",\n    \"Non\u2011critical informational purpose\",\n    \"No biometric or safety impact\",\n    \"No vulnerable population targeting\",\n    \"Potential for misinformation but limited scope\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": "Limited Risk",
+            "confidence": 0.95,
+            "justification": "The chatbot interacts with natural persons and requires transparency obligations under Article 50 of the EU AI Act, but it operates in a low-impact customer support context without making consequential decisions affecting fundamental rights.",
+            "key_factors": [
+              "Human-AI interaction",
+              "Transparency obligation",
+              "Customer support context",
+              "Low-impact information provision",
+              "No high-risk sector involvement"
+            ],
+            "raw": "{\"tier\": \"Limited Risk\", \"confidence\": 0.95, \"justification\": \"The chatbot interacts with natural persons and requires transparency obligations under Article 50 of the EU AI Act, but it operates in a low-impact customer support context without making consequential decisions affecting fundamental rights.\", \"key_factors\": [\"Human-AI interaction\", \"Transparency obligation\", \"Customer support context\", \"Low-impact information provision\", \"No high-risk sector involvement\"]}"
+          }
+        },
+        "round2": {}
+      },
+      "council_verdict": "Limited Risk",
+      "unanimous_round1": true
+    },
+    {
+      "id": "case-03",
+      "title": "Government social scoring of citizens",
+      "ground_truth": "Unacceptable",
+      "ground_truth_basis": "Prohibited practice: social scoring by public authorities leading to detrimental treatment.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "Unacceptable",
+            "confidence": 1.0,
+            "justification": "Under Article 5(1)(c) of the EU AI Act, AI systems that evaluate or classify natural persons over a period of time based on their social behavior (social scoring) by or on behalf of public authorities leading to detrimental or disproportionate treatment are strictly prohibited.",
+            "key_factors": [
+              "Article 5(1)(c) prohibition",
+              "Social scoring by public authority",
+              "Evaluation of civic behavior",
+              "Detrimental treatment regarding public services"
+            ],
+            "raw": "{\"tier\": \"Unacceptable\", \"confidence\": 1.0, \"justification\": \"Under Article 5(1)(c) of the EU AI Act, AI systems that evaluate or classify natural persons over a period of time based on their social behavior (social scoring) by or on behalf of public authorities leading to detrimental or disproportionate treatment are strictly prohibited.\", \"key_factors\": [\"Article 5(1)(c) prohibition\", \"Social scoring by public authority\", \"Evaluation of civic behavior\", \"Detrimental treatment regarding public services\"]}"
+          },
+          "seat-b": {
+            "tier": "Unacceptable",
+            "confidence": 0.98,
+            "justification": "The system is a public\u2011authority social scoring mechanism that determines access to essential services (public housing), which is explicitly prohibited under Article\u202f5 of the EU AI Act.",
+            "key_factors": [
+              "public authority",
+              "social scoring",
+              "access to essential service",
+              "discriminatory impact",
+              "prohibited practice under Art.\u202f5"
+            ],
+            "raw": "{\n  \"tier\": \"Unacceptable\",\n  \"confidence\": 0.98,\n  \"justification\": \"The system is a public\u2011authority social scoring mechanism that determines access to essential services (public housing), which is explicitly prohibited under Article\u202f5 of the EU AI Act.\",\n  \"key_factors\": [\n    \"public authority\",\n    \"social scoring\",\n    \"access to essential service\",\n    \"discriminatory impact\",\n    \"prohibited practice under Art.\u202f5\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": "Unacceptable",
+            "confidence": 1.0,
+            "justification": "Government social scoring systems that evaluate citizens based on behavior to determine access to essential services like public housing are explicitly prohibited under Article 5(1)(a) of the EU AI Act as they violate fundamental rights and constitute social scoring.",
+            "key_factors": [
+              "government social scoring",
+              "behavioral evaluation",
+              "denial of public housing",
+              "fundamental rights violation",
+              "Article 5 prohibition"
+            ],
+            "raw": "{\"tier\":\"Unacceptable\",\"confidence\":1.0,\"justification\":\"Government social scoring systems that evaluate citizens based on behavior to determine access to essential services like public housing are explicitly prohibited under Article 5(1)(a) of the EU AI Act as they violate fundamental rights and constitute social scoring.\",\"key_factors\":[\"government social scoring\",\"behavioral evaluation\",\"denial of public housing\",\"fundamental rights violation\",\"Article 5 prohibition\"]}"
+          }
+        },
+        "round2": {}
+      },
+      "council_verdict": "Unacceptable",
+      "unanimous_round1": true
+    },
+    {
+      "id": "case-04",
+      "title": "Email spam filter",
+      "ground_truth": "Minimal Risk",
+      "ground_truth_basis": "No prohibition, no Annex III listing, no transparency trigger; standard low-risk AI use.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "Minimal Risk",
+            "confidence": 1.0,
+            "justification": "AI-enabled spam filters represent standard, low-impact utility software that does not pose significant risks to fundamental rights or safety, serving as a primary benchmark for minimal risk under the EU AI Act.",
+            "key_factors": [
+              "Not covered by Annex III high-risk areas",
+              "No prohibited practices under Article 5",
+              "No transparency obligations under Article 50",
+              "Widely recognized by EU regulators as minimal risk"
+            ],
+            "raw": "{\"tier\": \"Minimal Risk\", \"confidence\": 1.0, \"justification\": \"AI-enabled spam filters represent standard, low-impact utility software that does not pose significant risks to fundamental rights or safety, serving as a primary benchmark for minimal risk under the EU AI Act.\", \"key_factors\": [\"Not covered by Annex III high-risk areas\", \"No prohibited practices under Article 5\", \"No transparency obligations under Article 50\", \"Widely recognized by EU regulators as minimal risk\"]}"
+          },
+          "seat-b": {
+            "tier": "Minimal Risk",
+            "confidence": 0.86,
+            "justification": "The email spam filter does not fall under any high\u2011risk categories defined by the EU AI Act and only performs routine content classification without affecting safety\u2011critical or fundamental rights decisions.",
+            "key_factors": [
+              "Not a biometric or emotion\u2011recognition system",
+              "No safety\u2011critical or legal decision making",
+              "Limited impact on user communications",
+              "Not listed in Annex III high\u2011risk AI systems"
+            ],
+            "raw": "{\n  \"tier\": \"Minimal Risk\",\n  \"confidence\": 0.86,\n  \"justification\": \"The email spam filter does not fall under any high\u2011risk categories defined by the EU AI Act and only performs routine content classification without affecting safety\u2011critical or fundamental rights decisions.\",\n  \"key_factors\": [\n    \"Not a biometric or emotion\u2011recognition system\",\n    \"No safety\u2011critical or legal decision making\",\n    \"Limited impact on user communications\",\n    \"Not listed in Annex III high\u2011risk AI systems\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        },
+        "round2": {
+          "seat-a": {
+            "tier": "Minimal Risk",
+            "confidence": 1.0,
+            "justification": "Spam filters remain a canonical example of minimal risk AI systems under the EU AI Act, as they do not infringe on fundamental rights or fall under any regulated high-risk or transparency categories.",
+            "changed_vote": false,
+            "raw": "{\"tier\": \"Minimal Risk\", \"confidence\": 1.0, \"justification\": \"Spam filters remain a canonical example of minimal risk AI systems under the EU AI Act, as they do not infringe on fundamental rights or fall under any regulated high-risk or transparency categories.\", \"changed_vote\": false}"
+          },
+          "seat-b": {
+            "tier": "Minimal Risk",
+            "confidence": 0.93,
+            "justification": "The spam filter only performs routine content classification, moving messages to a junk folder without influencing safety\u2011critical outcomes or fundamental rights.",
+            "changed_vote": false,
+            "raw": "{\n  \"tier\": \"Minimal Risk\",\n  \"confidence\": 0.93,\n  \"justification\": \"The spam filter only performs routine content classification, moving messages to a junk folder without influencing safety\u2011critical outcomes or fundamental rights.\",\n  \"changed_vote\": false\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        }
+      },
+      "council_verdict": "Minimal Risk",
+      "unanimous_round1": false
+    },
+    {
+      "id": "case-05",
+      "title": "Workplace emotion-recognition cameras",
+      "ground_truth": "Unacceptable",
+      "ground_truth_basis": "Prohibited practice: emotion inference systems in workplaces and educational institutions.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "Unacceptable",
+            "confidence": 0.95,
+            "justification": "Under Article 5(1)(f) of the EU AI Act, AI systems that infer emotions of natural persons in the workplace are strictly prohibited, as the call center wellness check-in context does not qualify for narrow safety or medical exemptions.",
+            "key_factors": [
+              "Article 5(1)(f) prohibited practice",
+              "Workplace emotion recognition",
+              "Biometric data analysis",
+              "Absence of valid safety or medical exemption"
+            ],
+            "raw": "{\"tier\": \"Unacceptable\", \"confidence\": 0.95, \"justification\": \"Under Article 5(1)(f) of the EU AI Act, AI systems that infer emotions of natural persons in the workplace are strictly prohibited, as the call center wellness check-in context does not qualify for narrow safety or medical exemptions.\", \"key_factors\": [\"Article 5(1)(f) prohibited practice\", \"Workplace emotion recognition\", \"Biometric data analysis\", \"Absence of valid safety or medical exemption\"]}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.92,
+            "justification": "The system processes facial biometric data to infer emotions of employees and is used for monitoring and decision\u2011making in the workplace, which the EU AI Act classifies as a high\u2011risk AI application.",
+            "key_factors": [
+              "Biometric facial data",
+              "Real\u2011time emotion inference",
+              "Employment/worker monitoring",
+              "Potential impact on workers' rights",
+              "Decision\u2011support for wellness interventions"
+            ],
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.92,\n  \"justification\": \"The system processes facial biometric data to infer emotions of employees and is used for monitoring and decision\u2011making in the workplace, which the EU AI Act classifies as a high\u2011risk AI application.\",\n  \"key_factors\": [\n    \"Biometric facial data\",\n    \"Real\u2011time emotion inference\",\n    \"Employment/worker monitoring\",\n    \"Potential impact on workers' rights\",\n    \"Decision\u2011support for wellness interventions\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "Emotion recognition systems deployed in employment contexts to monitor and evaluate workers are classified as high-risk under Annex III of the EU AI Act due to their impact on worker rights and dignity.",
+            "key_factors": [
+              "emotion recognition",
+              "workplace monitoring",
+              "employee evaluation",
+              "wellness check-ins"
+            ],
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.95, \"justification\": \"Emotion recognition systems deployed in employment contexts to monitor and evaluate workers are classified as high-risk under Annex III of the EU AI Act due to their impact on worker rights and dignity.\", \"key_factors\": [\"emotion recognition\", \"workplace monitoring\", \"employee evaluation\", \"wellness check-ins\"]}"
+          }
+        },
+        "round2": {
+          "seat-a": {
+            "tier": "Unacceptable",
+            "confidence": 0.96,
+            "justification": "Under Article 5(1)(f) of the EU AI Act, deploying AI systems to infer emotions of natural persons in the workplace is explicitly prohibited as an unacceptable risk, and routine call center wellness monitoring does not meet the narrow threshold for medical or safety exemptions.",
+            "changed_vote": false,
+            "raw": "{\"tier\": \"Unacceptable\", \"confidence\": 0.96, \"justification\": \"Under Article 5(1)(f) of the EU AI Act, deploying AI systems to infer emotions of natural persons in the workplace is explicitly prohibited as an unacceptable risk, and routine call center wellness monitoring does not meet the narrow threshold for medical or safety exemptions.\", \"changed_vote\": false}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.88,
+            "justification": "Emotion-recognition cameras used for employee monitoring in the workplace fall under Annex III high\u2011risk AI systems, as they affect workers' rights and dignity, but they are not expressly prohibited under Article 5(1)(f).",
+            "changed_vote": false,
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.88,\n  \"justification\": \"Emotion-recognition cameras used for employee monitoring in the workplace fall under Annex III high\u2011risk AI systems, as they affect workers' rights and dignity, but they are not expressly prohibited under Article 5(1)(f).\",\n  \"changed_vote\": false\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        }
+      },
+      "council_verdict": "Unacceptable",
+      "unanimous_round1": false
+    },
+    {
+      "id": "case-06",
+      "title": "AI-assisted radiology diagnosis",
+      "ground_truth": "High-Risk",
+      "ground_truth_basis": "Annex III: AI systems intended as safety components or used in healthcare/medical contexts; also a medical device under MDR.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "The system functions as diagnostic medical software covered by the EU Medical Devices Regulation (MDR 2017/745), requiring third-party conformity assessment and thus qualifying as high-risk under Article 6(1) and Annex I of the EU AI Act.",
+            "key_factors": [
+              "Medical device software (MDR 2017/745)",
+              "Diagnostic decision support",
+              "Annex I regulated product",
+              "Health and safety impact"
+            ],
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.95, \"justification\": \"The system functions as diagnostic medical software covered by the EU Medical Devices Regulation (MDR 2017/745), requiring third-party conformity assessment and thus qualifying as high-risk under Article 6(1) and Annex I of the EU AI Act.\", \"key_factors\": [\"Medical device software (MDR 2017/745)\", \"Diagnostic decision support\", \"Annex I regulated product\", \"Health and safety impact\"]}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.96,
+            "justification": "The system is used to assist in medical diagnosis (pneumonia detection) on chest X\u2011rays, which the EU AI Act classifies as a high\u2011risk AI system under the medical device category.",
+            "key_factors": [
+              "medical imaging",
+              "diagnostic support",
+              "potential impact on patient health",
+              "regulated as a medical device",
+              "used by healthcare professionals"
+            ],
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.96,\n  \"justification\": \"The system is used to assist in medical diagnosis (pneumonia detection) on chest X\u2011rays, which the EU AI Act classifies as a high\u2011risk AI system under the medical device category.\",\n  \"key_factors\": [\n    \"medical imaging\",\n    \"diagnostic support\",\n    \"potential impact on patient health\",\n    \"regulated as a medical device\",\n    \"used by healthcare professionals\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        },
+        "round2": {
+          "seat-a": {
+            "tier": "High-Risk",
+            "confidence": 0.98,
+            "justification": "The AI tool acts as a medical device (or a safety component thereof) under EU MDR 2017/745 subject to third-party conformity assessment, firmly placing it in the High-Risk category under Article 6(1) and Annex I. The consensus with seat-b reinforces this direct statutory classification.",
+            "changed_vote": false,
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.98, \"justification\": \"The AI tool acts as a medical device (or a safety component thereof) under EU MDR 2017/745 subject to third-party conformity assessment, firmly placing it in the High-Risk category under Article 6(1) and Annex I. The consensus with seat-b reinforces this direct statutory classification.\", \"changed_vote\": false}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.96,
+            "justification": "The AI assists radiologists in diagnosing pneumonia from chest X\u2011rays, qualifying as medical device software under the MDR and thus a high\u2011risk AI system per Article 6(1) of the EU AI Act.",
+            "changed_vote": false,
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.96,\n  \"justification\": \"The AI assists radiologists in diagnosing pneumonia from chest X\u2011rays, qualifying as medical device software under the MDR and thus a high\u2011risk AI system per Article 6(1) of the EU AI Act.\",\n  \"changed_vote\": false\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        }
+      },
+      "council_verdict": "High-Risk",
+      "unanimous_round1": false
+    },
+    {
+      "id": "case-07",
+      "title": "AI-generated product descriptions",
+      "ground_truth": "Limited Risk",
+      "ground_truth_basis": "Transparency obligation: AI-generated content must be disclosed as machine-generated where relevant.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": "Minimal Risk",
+            "confidence": 0.95,
+            "justification": "Drafting commercial product copy does not fall under prohibited or high-risk categories under Annex III. Furthermore, human editorial review before publication exempts the text from specific transparency disclosure obligations under Article 50.",
+            "key_factors": [
+              "Human editorial review",
+              "E-commerce marketing copy",
+              "No fundamental rights impact",
+              "Exemption from transparency obligations"
+            ],
+            "raw": "{\"tier\": \"Minimal Risk\", \"confidence\": 0.95, \"justification\": \"Drafting commercial product copy does not fall under prohibited or high-risk categories under Annex III. Furthermore, human editorial review before publication exempts the text from specific transparency disclosure obligations under Article 50.\", \"key_factors\": [\"Human editorial review\", \"E-commerce marketing copy\", \"No fundamental rights impact\", \"Exemption from transparency obligations\"]}"
+          },
+          "seat-b": {
+            "tier": "Limited Risk",
+            "confidence": 0.78,
+            "justification": "The system generates marketing text that could mislead consumers if inaccurate, but human review mitigates the risk, keeping it below high\u2011risk thresholds.",
+            "key_factors": [
+              "generative text for marketing",
+              "human oversight before publication",
+              "potential for misinformation",
+              "no direct impact on safety or fundamental rights"
+            ],
+            "raw": "{\"tier\":\"Limited Risk\",\"confidence\":0.78,\"justification\":\"The system generates marketing text that could mislead consumers if inaccurate, but human review mitigates the risk, keeping it below high\u2011risk thresholds.\",\"key_factors\":[\"generative text for marketing\",\"human oversight before publication\",\"potential for misinformation\",\"no direct impact on safety or fundamental rights\"]}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        },
+        "round2": {
+          "seat-a": {
+            "tier": "Minimal Risk",
+            "confidence": 0.95,
+            "justification": "Under Article 50(2) of the EU AI Act, synthetic text that undergoes human review and editorial responsibility prior to publication is explicitly exempted from transparency disclosure obligations. Because no Annex III high-risk criteria or Article 50 transparency mandates apply, the system falls under the Minimal Risk category.",
+            "changed_vote": false,
+            "raw": "{\"tier\": \"Minimal Risk\", \"confidence\": 0.95, \"justification\": \"Under Article 50(2) of the EU AI Act, synthetic text that undergoes human review and editorial responsibility prior to publication is explicitly exempted from transparency disclosure obligations. Because no Annex III high-risk criteria or Article 50 transparency mandates apply, the system falls under the Minimal Risk category.\", \"changed_vote\": false}"
+          },
+          "seat-b": {
+            "tier": "Limited Risk",
+            "confidence": 0.78,
+            "justification": "The AI can generate inaccurate or misleading product descriptions, but mandatory human review before publication mitigates the risk, keeping it below high\u2011risk thresholds.",
+            "changed_vote": false,
+            "raw": "{\n  \"tier\": \"Limited Risk\",\n  \"confidence\": 0.78,\n  \"justification\": \"The AI can generate inaccurate or misleading product descriptions, but mandatory human review before publication mitigates the risk, keeping it below high\u2011risk thresholds.\",\n  \"changed_vote\": false\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        }
+      },
+      "council_verdict": "Minimal Risk",
+      "unanimous_round1": false
+    },
+    {
+      "id": "case-08",
+      "title": "Predictive policing recidivism scores",
+      "ground_truth": "High-Risk",
+      "ground_truth_basis": "Annex III: AI systems used by law enforcement for risk assessments of natural persons.",
+      "rounds": {
+        "round1": {
+          "seat-a": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: Google HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.go",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: Google HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.go"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "The system is used by law enforcement to assess individuals' likelihood of reoffending and allocate parole supervision, which falls under the AI Act's high\u2011risk category for law\u2011enforcement and biometric risk\u2011assessment tools.",
+            "key_factors": [
+              "Law enforcement application",
+              "Individual risk scoring",
+              "Impact on fundamental rights",
+              "Decision\u2011support for parole supervision",
+              "Potential for bias and discrimination"
+            ],
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.95,\n  \"justification\": \"The system is used by law enforcement to assess individuals' likelihood of reoffending and allocate parole supervision, which falls under the AI Act's high\u2011risk category for law\u2011enforcement and biometric risk\u2011assessment tools.\",\n  \"key_factors\": [\n    \"Law enforcement application\",\n    \"Individual risk scoring\",\n    \"Impact on fundamental rights\",\n    \"Decision\u2011support for parole supervision\",\n    \"Potential for bias and discrimination\"\n  ]\n}"
+          },
+          "seat-c": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "This use case falls under Article 6 of the EU AI Act as it involves law enforcement authorities using AI to predict recidivism and assess individual risk of reoffending, directly affecting individuals' liberty and rights in the criminal justice context.",
+            "key_factors": [
+              "law enforcement use",
+              "predictive policing",
+              "recidivism scoring",
+              "individual risk assessment",
+              "criminal justice",
+              "profiling"
+            ],
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.95, \"justification\": \"This use case falls under Article 6 of the EU AI Act as it involves law enforcement authorities using AI to predict recidivism and assess individual risk of reoffending, directly affecting individuals' liberty and rights in the criminal justice context.\", \"key_factors\": [\"law enforcement use\", \"predictive policing\", \"recidivism scoring\", \"individual risk assessment\", \"criminal justice\", \"profiling\"]}"
+          }
+        },
+        "round2": {
+          "seat-a": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "Under Annex III, Point 6(a) of the EU AI Act, AI systems used by law enforcement authorities to evaluate the risk of an individual reoffending are explicitly designated as High-Risk.",
+            "changed_vote": true,
+            "raw": "{\"tier\": \"High-Risk\", \"confidence\": 0.95, \"justification\": \"Under Annex III, Point 6(a) of the EU AI Act, AI systems used by law enforcement authorities to evaluate the risk of an individual reoffending are explicitly designated as High-Risk.\", \"changed_vote\": true}"
+          },
+          "seat-b": {
+            "tier": "High-Risk",
+            "confidence": 0.95,
+            "justification": "The AI system is used by law\u2011enforcement to assess individuals' risk of reoffending and allocate parole supervision, directly impacting liberty and fundamental rights, which places it under Article\u202f6 high\u2011risk classification.",
+            "changed_vote": false,
+            "raw": "{\n  \"tier\": \"High-Risk\",\n  \"confidence\": 0.95,\n  \"justification\": \"The AI system is used by law\u2011enforcement to assess individuals' risk of reoffending and allocate parole supervision, directly impacting liberty and fundamental rights, which places it under Article\u202f6 high\u2011risk classification.\",\n  \"changed_vote\": false\n}"
+          },
+          "seat-c": {
+            "tier": null,
+            "confidence": null,
+            "justification": "FAILED: OpenRouter HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50",
+            "key_factors": [],
+            "raw": "",
+            "error": true,
+            "repaired": true,
+            "original_error": "FAILED: no JSON object found"
+          }
+        }
+      },
+      "council_verdict": "High-Risk",
+      "unanimous_round1": false
+    }
+  ]
+}

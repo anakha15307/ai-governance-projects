@@ -1,6 +1,6 @@
 # AI Governance Projects
 
-Sixteen buildable, portfolio-ready projects covering the core competencies of AI governance, seven technical builds plus nine analyst/operations projects (07-15) drawn from a 25-posting analysis of junior AI governance roles.
+Seventeen buildable, portfolio-ready projects covering the core competencies of AI governance, seven technical builds plus nine analyst/operations projects (07-15) drawn from a 25-posting analysis of junior AI governance roles.
 
 | # | Project | Governance competency |
 |---|---------|----------------------|
@@ -20,6 +20,7 @@ Sixteen buildable, portfolio-ready projects covering the core competencies of AI
 | 14 | [`ai-incident-deconstructions/`](./ai-incident-deconstructions/) | Incident review: governance deconstructions of 3 real AI incidents with root-cause analysis, controls, and NIST AI RMF mapping |
 | 15 | [`ai-governance-playbook/`](./ai-governance-playbook/) | Program operations: end-to-end governance playbook: 16 chapters, 11 fillable templates, cross-referenced to this repo's tooling |
 | 16 | [`laya-governance-experiments/`](./laya-governance-experiments/) | Safety evaluation: red-team, calibration, and bias-probe a 421M decision model as a governance layer, with full test report |
+| 17 | [`ai-governance-council/`](./ai-governance-council/) | Multi-model oversight: three LLMs independently classify EU AI Act cases, deliberate on disagreement, and vote; full findings on accuracy, calibration, and free-tier reliability |
 
 ## Skills coverage
 
@@ -55,7 +56,7 @@ cd eu-ai-act-risk-classifier && python classify.py --demo
 
 ## Why these sixteen
 
-Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01-06 prove the technical evaluation skills; projects 07-14 prove the analyst/operations skills junior postings ask for most, intake, triage, policy drafting, vendor review, regulatory tracking, third-party assessment from public sources, and incident review. Project 15 is the operating manual that ties them together: a 16-chapter governance playbook with 11 fillable templates, cross-referenced to the tooling in projects 01-14. Project 16 puts a brand-new model class, the decision model, through the same safety, calibration, and bias testing a governance team would run before piloting it. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief), the kind of evidence that lands interviews.
+Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01-06 prove the technical evaluation skills; projects 07-14 prove the analyst/operations skills junior postings ask for most, intake, triage, policy drafting, vendor review, regulatory tracking, third-party assessment from public sources, and incident review. Project 15 is the operating manual that ties them together: a 16-chapter governance playbook with 11 fillable templates, cross-referenced to the tooling in projects 01-14. Project 16 puts a brand-new model class, the decision model, through the same safety, calibration, and bias testing a governance team would run before piloting it. Project 17 runs a real multi-model AI governance council on free API tiers, three LLMs voting on EU AI Act cases with deliberation, and reports honestly on both accuracy and free-tier reliability. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief), the kind of evidence that lands interviews.
 
 ## Notes
 
