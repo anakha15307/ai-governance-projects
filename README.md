@@ -1,6 +1,6 @@
 # AI Governance Projects
 
-Fifteen buildable, portfolio-ready projects covering the core competencies of AI governance, six technical builds plus nine analyst/operations projects (07-15) drawn from a 25-posting analysis of junior AI governance roles.
+Sixteen buildable, portfolio-ready projects covering the core competencies of AI governance, seven technical builds plus nine analyst/operations projects (07-15) drawn from a 25-posting analysis of junior AI governance roles.
 
 | # | Project | Governance competency |
 |---|---------|----------------------|
@@ -19,6 +19,7 @@ Fifteen buildable, portfolio-ready projects covering the core competencies of AI
 | 13 | [`khanmigo-risk-assessment/`](./khanmigo-risk-assessment/) | Third-party risk assessment: Khanmigo (education AI), public-sources only |
 | 14 | [`ai-incident-deconstructions/`](./ai-incident-deconstructions/) | Incident review: governance deconstructions of 3 real AI incidents with root-cause analysis, controls, and NIST AI RMF mapping |
 | 15 | [`ai-governance-playbook/`](./ai-governance-playbook/) | Program operations: end-to-end governance playbook: 16 chapters, 11 fillable templates, cross-referenced to this repo's tooling |
+| 16 | [`laya-governance-experiments/`](./laya-governance-experiments/) | Safety evaluation: red-team, calibration, and bias-probe a 421M decision model as a governance layer, with full test report |
 
 ## Skills coverage
 
@@ -34,6 +35,7 @@ governance roles (frequency in sample) to the projects demonstrating them.
 | Privacy-law adjacency (36%) | 09 data-protection controls · 13 COPPA/FERPA DPA review · 08 data rules · 10 DPA checklist · 15 Ch. 6 data-handling rules, Ch. 12 DPA considerations |
 | Regulatory tracking (32%) | 11 monthly briefs · 09 EU AI Act tiering · 15 Ch. 13 crosswalk & change-tracking |
 | Internal AI policy drafting (24%) | 08 GenAI acceptable-use policy · 15 Ch. 6 policy suite |
+| Model safety evaluation (guardrail + calibration + bias testing) | 16 Laya experiments · 03 red-team harness · 02 bias-audit suite |
 
 Every project README follows one structure - **problem → users/stakeholders →
 methods → results → risks and controls → next steps**, so each reads as a
@@ -51,9 +53,9 @@ Every project is self-contained, runs on Python 3.12 with **standard library onl
 cd eu-ai-act-risk-classifier && python classify.py --demo
 ```
 
-## Why these fifteen
+## Why these sixteen
 
-Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01-06 prove the technical evaluation skills; projects 07-14 prove the analyst/operations skills junior postings ask for most, intake, triage, policy drafting, vendor review, regulatory tracking, third-party assessment from public sources, and incident review. Project 15 is the operating manual that ties them together: a 16-chapter governance playbook with 11 fillable templates, cross-referenced to the tooling in projects 01-14. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief), the kind of evidence that lands interviews.
+Governance hiring managers look for evidence you can *do* the work: assess risk, run evaluations, test safety, build oversight, track provenance, and communicate status. Projects 01-06 prove the technical evaluation skills; projects 07-14 prove the analyst/operations skills junior postings ask for most, intake, triage, policy drafting, vendor review, regulatory tracking, third-party assessment from public sources, and incident review. Project 15 is the operating manual that ties them together: a 16-chapter governance playbook with 11 fillable templates, cross-referenced to the tooling in projects 01-14. Project 16 puts a brand-new model class, the decision model, through the same safety, calibration, and bias testing a governance team would run before piloting it. Each project produces an artifact (a report, a scoreboard, an audit log, a dashboard, a policy, a brief), the kind of evidence that lands interviews.
 
 ## Notes
 
