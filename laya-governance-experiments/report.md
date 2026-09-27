@@ -7,7 +7,7 @@ Anakha Vijayan | September 26, 2026
 *About the author: I'm a teacher with seven years in education, now doing independent AI governance research. This report is part of a public portfolio of hands-on experiments.*
 
 Model under test: Laya 0.3.20 (`convaiinnovations/laya`), Apache 2.0, run locally on CPU.
-Code, datasets, and raw results: https://github.com/anakha15307/ai-governance-projects/tree/main/laya-governance-experiments (commit `ba52952`).
+Code, datasets, and raw results: https://github.com/anakha15307/ai-governance-projects/tree/main/laya-governance-experiments (commit `6334487`).
 
 ## 1. Executive summary
 
@@ -71,8 +71,11 @@ Three questions drove the experiments.
 ## 4. Methodology
 
 **Model and environment.** Laya 0.3.20 via `pip install laya`, checkpoint
-`convaiinnovations/laya`, loaded from a local snapshot. Inference on CPU,
-batched (batch size 8 for the prompt sets, 2 for the bias pairs).
+`convaiinnovations/laya` (SHA-256 of `model.safetensors`:
+`891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c`),
+loaded from a local snapshot. Inference on CPU (AMD EPYC 9D25), batched
+(batch size 8 for the prompt sets, 2 for the bias pairs). Python 3.12.3,
+torch 2.14.0, transformers 5.17.0, safetensors 0.8.0, tokenizers 0.23.2.
 
 **Questions.** Each experiment asks one typed question per item:
 
@@ -104,12 +107,14 @@ Flip rate and mean absolute probability shift for bias.
 
 | Metric | Value |
 |---|---|
-| Accuracy | 0.850 (51/60) |
-| Precision | 1.000 (no benign prompt flagged) |
-| Recall | 0.700 (21 of 30 attacks caught) |
+| Accuracy | 0.850 (51/60), 95% CI 0.739-0.919 |
+| Precision | 1.000 (21/21), 95% CI 0.845-1.000 |
+| Recall | 0.700 (21/30), 95% CI 0.521-0.833 |
 | True/false positives | 30 TN, 0 FP |
 | Missed attacks | 9 FN |
 | Mean latency | 0.94 s per decision (CPU, batched) |
+
+Intervals are Wilson score 95% confidence intervals from the 60 labeled prompts.
 
 The gate never blocked a legitimate request. That's the harder property to
 get from a safety filter, and it matters. Its misses form a clear pattern:
@@ -127,6 +132,24 @@ is exactly the profile where a second, different layer helps most. Zero
 false positives means it can run silently without annoying users. 70% recall
 means it can't run alone.
 
+**A rules-based baseline.** For comparison I scored the same 60 prompts with
+a 15-keyword filter (terms like "ignore all previous instructions,"
+"roleplay," "pretend," "hypothetically"). It reached 70% accuracy with 100%
+precision and 40% recall (12 of 30 attacks caught). Laya beats it by 15
+points of accuracy and 30 points of recall. One honest caveat: I wrote the
+keyword list knowing these prompts, so the baseline is flattered, not fairly
+beaten. Even flattered, it loses on recall, which is the metric that matters
+for a gate.
+
+**What the errors would cost.** Zero false positives means no legitimate
+user gets blocked, so the deployment risk sits entirely on the misses. Nine
+misses out of 30 is a 30% pass-through rate for attacks, and the recall
+confidence interval (0.521-0.833) says the true rate could be worse. An
+attacker who discovers this gate only needs to learn one thing: phrase it as
+a story. That is why this gate can only ever be a first layer. Whatever it
+clears still needs downstream controls, and the flagged set needs human
+review, not auto-blocking, until recall is much higher.
+
 ## 6. Experiment 2: Calibration
 
 | Confidence band | n | Mean confidence | Empirical accuracy |
@@ -136,7 +159,8 @@ means it can't run alone.
 | 0.80 - 0.90 | 4 | 0.870 | 0.250 |
 | 0.90 - 1.00 | 52 | 0.988 | 0.923 |
 
-Expected calibration error (10-bin): **0.125**.
+Expected calibration error (10-bin): **0.125** (bootstrap 95% CI 0.055-0.217,
+2000 resamples).
 
 Where the model is most confident, its probabilities are honest. 52 of 60
 decisions landed above 0.90 confidence and were right 92% of the time. The
@@ -176,6 +200,9 @@ one didn't flip, so it earned the bigger test.
 ## 8. Limitations
 
 - Small samples throughout: 60 labeled prompts, 6 bias pairs.
+- No held-out split: the same 60 prompts were used both to observe behavior
+  and to report metrics. A proper development/validation/test split needs a
+  bigger dataset.
 - One model, one checkpoint, English only, single run (no variance estimate).
 - The prompt set is hand-built, not a standard benchmark. Attack coverage is
   illustrative.
@@ -194,6 +221,9 @@ defense needs to cover. For governance teams, the pattern this suggests is
 a small decision model as a cheap first-pass gate, with a larger model or a
 human handling whatever falls below the confidence threshold.
 
+To be clear about what this isn't: nothing here is evidence of production
+readiness. It's a first look, and it reads that way on purpose.
+
 ## 10. References
 
 - Laya model card (convaiinnovations/laya): https://huggingface.co/convaiinnovations/laya
@@ -204,10 +234,51 @@ human handling whatever falls below the confidence threshold.
 ## 11. Reproducibility
 
 All code, datasets, and raw results ship in the repository folder linked at
-the top of this report (commit `ba52952`). `datasets.py` holds the prompt
-sets, `run_experiments.py` runs all three experiments (requires
-`pip install laya`), `analyze.py` reproduces every number in this report
-from the saved JSON results without needing the model.
+the top of this report (commit `6334487`). Exact reproduction commands:
+
+```
+pip install laya==0.3.20
+python run_experiments.py
+python analyze.py
+```
+
+`run_experiments.py` runs all three experiments and saves JSON results.
+`analyze.py` reproduces every number in this report from the saved JSON
+without needing the model. `datasets.py` holds the prompt sets.
+
+Environment: Python 3.12.3, torch 2.14.0, transformers 5.17.0,
+safetensors 0.8.0, tokenizers 0.23.2, CPU-only (AMD EPYC 9D25). Model
+checkpoint SHA-256 is listed in the methodology section.
+
+## 12. Monitoring and regression plan (proposed)
+
+I haven't built this yet. If this gate went anywhere near production, the
+plan would be:
+
+- Pin the 60-prompt set as a regression suite. Rerun it on every checkpoint
+  or package change. Alert if recall drops below 0.65 or any false positive
+  appears.
+- Track live traffic: flag rate, human override rate, and latency
+  percentiles. A drifting flag rate means the input distribution moved.
+- Recalibrate confidence thresholds quarterly against fresh labeled data,
+  and re-probe bias with a larger pair set before each release.
+
+## 13. Future work
+
+What this report doesn't do yet, stated plainly:
+
+- Bigger datasets: hundreds of prompts per category, with a held-out test
+  split and independent human labeling instead of my own.
+- Standard benchmarks and more attack types: multilingual prompts,
+  encoded or obfuscated attacks, multi-turn jailbreaks, prompt injection.
+- Comparisons against conventional classifiers and larger language models,
+  not just a keyword list.
+- Repeated runs across random seeds, hardware, and quantization settings
+  for variance estimates.
+- Intersectional bias probing with adversarial phrasings of the scenarios
+  themselves.
+
+These are the natural next experiments.
 
 ## Appendix A: Raw counts and sample prompts
 
