@@ -5,7 +5,7 @@
 
 **[v1.1 release notes](https://github.com/anakha15307/ai-governance-projects/releases/tag/v1.1)**
 
-I'm Anu, a teacher with seven years in education, training, and assessment.
+I'm Anakha, a teacher with seven years in education, training, and assessment.
 I started building independent AI governance projects in May 2026, and earned
 the IAPP AI Governance Professional (AIGP) certification in 2026. Everything
 here is my own learning made public: I design each project, build it with AI
