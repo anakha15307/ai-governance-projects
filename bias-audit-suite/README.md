@@ -90,6 +90,56 @@ If your model answers in free-form prose, you may need to harden the
 classifiers in `probes.py` (pronoun extraction, sentiment detection,
 agree/disagree classification): the current ones assume short completions.
 
+### Illustrative example: a safe integration sketch
+
+The sketch below shows the shape a real integration would take. It is
+illustrative only: it has never been run against a real endpoint, and the
+URL is a placeholder. The safety points that matter for a governance audit
+are the API key coming from an environment variable (never committed), a
+timeout so a hung endpoint cannot stall the audit, and logging every
+prompt and response to the audit trail.
+
+```python
+import json
+import logging
+import os
+import urllib.request
+
+from models import ModelClient
+
+log = logging.getLogger("audit")
+
+class SafeApiClient(ModelClient):
+    """Illustrative only: never run against a real endpoint."""
+
+    name = "example-api-model"
+
+    def __init__(self):
+        self.api_key = os.environ["MODEL_API_KEY"]  # fail fast, never hardcode
+        self.endpoint = "https://example.invalid/v1/completions"  # placeholder
+
+    def respond(self, prompt: str) -> str:
+        body = json.dumps({"prompt": prompt, "max_tokens": 64}).encode()
+        req = urllib.request.Request(
+            self.endpoint,
+            data=body,
+            headers={"Authorization": f"Bearer {self.api_key}",
+                     "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                text = json.loads(resp.read())["choices"][0]["text"]
+        except Exception as exc:  # timeout, auth, or endpoint failure
+            log.error("model call failed for prompt %r: %s", prompt[:60], exc)
+            raise
+        log.info("prompt=%r response=%r", prompt[:120], text[:120])
+        return text
+```
+
+Register it in `MODEL_REGISTRY` in `audit.py` as `"example-api": SafeApiClient`
+and run `python3 audit.py --models example-api neutral`. The logged
+prompt/response pairs become the evidence trail a reviewer would ask for.
+
 ## Project structure
 
 ```

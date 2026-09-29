@@ -1,5 +1,8 @@
 # AI Governance Projects
 
+[![CI](https://github.com/anakha15307/ai-governance-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/anakha15307/ai-governance-projects/actions)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+
 I'm Anu, a teacher with seven years in education, training, and assessment.
 I started building independent AI governance projects in May 2026, and earned
 the IAPP AI Governance Professional (AIGP) certification in 2026. Everything
@@ -11,6 +14,20 @@ The repo holds **17 projects**: 7 technical builds, 8 analyst/operations
 projects, and 2 research experiments, plus **2 companion case studies** that
 sit on top of the technical work (the LLM eval case study draws on the
 bias-audit and red-team projects).
+
+## Start here
+
+If you are reviewing this repo, follow this order:
+
+1. Skim this README for the map of what's here.
+2. Read the three flagship projects below: the Laya experiments, the AI
+   Governance Council, and the governance playbook.
+3. Walk through [`docs/end-to-end-demo.md`](docs/end-to-end-demo.md) to see
+   how the pieces connect across one fictional use case.
+4. Run the offline demos (`./run_all_demos.sh`) or the tests (`pytest -q`).
+5. Read [`docs/assumptions-and-limitations.md`](docs/assumptions-and-limitations.md)
+   before quoting any number: it says exactly what each result can and
+   cannot support.
 
 ## How to read this repo
 
@@ -55,6 +72,11 @@ plus a [model card](laya-governance-experiments/MODEL_CARD.md),
 [threat model](laya-governance-experiments/THREAT_MODEL.md), and
 [risk register](laya-governance-experiments/RISK_REGISTER.md).
 
+**What I built.** The experiment design, all 60 hand-written prompts, the
+15-keyword rules baseline, the analysis script with the Wilson and bootstrap
+intervals, and the report itself. To replay the numbers offline (no installs):
+`cd laya-governance-experiments && python3 analyze.py`.
+
 ### 17. AI Governance Council (research)
 
 Three LLM seats (Gemini 3.8 Flash, gpt-oss 120B via Groq, Ling 3.0 Flash via
@@ -75,6 +97,10 @@ plus a [model card](ai-governance-council/MODEL_CARD.md),
 [threat model](ai-governance-council/THREAT_MODEL.md), and
 [risk register](ai-governance-council/RISK_REGISTER.md).
 
+**What I built.** The 8 synthetic cases, the runner and repair scripts, the
+analyzer, and the findings write-up. To replay the numbers offline (no API
+keys): `cd ai-governance-council && python3 analyze.py`.
+
 ### 15. AI governance playbook (analyst)
 
 An end-to-end operating manual for running an AI governance program at a
@@ -82,6 +108,13 @@ mid-size organization: 16 chapters and 11 fillable templates, written in plain
 language for the analysts and coordinators who do the work. It ties the rest
 of the repo together, cross-referencing the intake, tiering, assessment, and
 monitoring tooling in projects 01 through 14.
+
+**What I built.** All 16 chapters and 11 templates, drafted from the
+governance questions I wanted a working analyst to be able to answer. There
+is no code to run here; the way in is the
+[end-to-end demo](docs/end-to-end-demo.md), which walks one fictional use
+case through the playbook's intake, tiering, assessment, approval,
+monitoring, and incident steps.
 
 ## All projects
 
@@ -152,7 +185,7 @@ tools is part of what I'm learning to govern.
 ## Docs
 
 - [`docs/framework-crosswalk.md`](docs/framework-crosswalk.md): how projects map to NIST AI RMF, ISO/IEC 42001, and the EU AI Act, with the exact evidence each project produces.
-- [`docs/end-to-end-demo.md`](docs/end-to-end-demo.md): one walkthrough from AI intake through risk assessment, approval, monitoring, and incident response, using this repo's own tooling.
+- [`docs/end-to-end-demo.md`](docs/end-to-end-demo.md): one walkthrough from AI intake through risk assessment, approval, monitoring, and incident response, using this repo's own tooling. The lifecycle diagram is at [`docs/figures/architecture.png`](docs/figures/architecture.png).
 - [`docs/monitoring-and-incident-response.md`](docs/monitoring-and-incident-response.md): a proposed monitoring plan and incident reporting, escalation, and rollback procedures.
 - [`docs/assumptions-and-limitations.md`](docs/assumptions-and-limitations.md): assumptions, limitations, intended use, and prohibited use, for the repo as a whole.
 - [`docs/references.md`](docs/references.md): citations for the legal, regulatory, and technical claims made here.
@@ -161,6 +194,11 @@ tools is part of what I'm learning to govern.
 
 Matrix mapping the analyst skills from a 25-posting sample of junior AI
 governance roles (frequency in sample) to the projects demonstrating them.
+
+*Methodology note.* The 25 postings are a convenience sample I gathered
+myself from public job boards, and the skill coding is my own. Treat the
+percentages as rough ordering of what postings asked for, not as market
+statistics.
 
 | Analyst skill (share of postings) | Demonstrated in |
 |---|---|
@@ -192,6 +230,18 @@ governance council on free API tiers and reports honestly on both accuracy and
 free-tier reliability. Each project produces an artifact (a report, a
 scoreboard, an audit log, a dashboard, a policy, a brief). I add depth and
 reproducibility to these rather than adding more projects.
+
+## Limitations of this portfolio
+
+This repo is learning evidence, not independently validated professional
+work. I built every project myself (with AI coding assistance, as noted
+above), and no employer, auditor, or peer has reviewed the results. Samples
+are small (60 prompts, 8 council cases, 68 audit probes), several projects
+run on stub or free-tier models, and there are no held-out test sets. The
+full list lives in
+[`docs/assumptions-and-limitations.md`](docs/assumptions-and-limitations.md).
+If you are hiring, treat this as a record of how I think, document, and
+test, not as proof that any system here is production-ready.
 
 ## Notes
 

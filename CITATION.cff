@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: AI Governance Projects
+message: "If you use this work, please cite it as below."
+type: software
+authors:
+  - family-names: Vijayan
+    given-names: Anakha
+version: 1.1
+date-released: 2026-09-29
+repository-code: https://github.com/anakha15307/ai-governance-projects
+url: https://github.com/anakha15307/ai-governance-projects
+license: MIT
+keywords:
+  - ai-governance
+  - bias-audit
+  - red-teaming
+  - nist-ai-rmf
+  - eu-ai-act

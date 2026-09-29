@@ -8,6 +8,8 @@ system.
 **Scenario.** A tutoring company wants to pilot an AI writing coach for
 middle-school students. A product manager submits it for governance review.
 
+![AI governance lifecycle](figures/architecture.png)
+
 ## 1. Intake
 
 The product manager fills in the standard intake form

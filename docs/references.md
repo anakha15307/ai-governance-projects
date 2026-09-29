@@ -25,10 +25,12 @@ exists.
 ## Privacy law (referenced in assessments, not legal advice)
 
 - *Children's Online Privacy Protection Act (COPPA),* 15 U.S.C. sections
-  6501-6506. Referenced in the edtech and Khanmigo assessments for
-  under-13 data rules.
+  6501-6506, enacted 1998. Referenced in the edtech and Khanmigo assessments
+  for under-13 data rules.
+  https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312
 - *Family Educational Rights and Privacy Act (FERPA),* 20 U.S.C. section
-  1232g. Referenced for student education records.
+  1232g, enacted 1974. Referenced for student education records.
+  https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html
 
 ## Methods
 
