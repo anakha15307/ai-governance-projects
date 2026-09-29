@@ -1,0 +1,19 @@
+name: Content correction
+description: Flag an outdated regulation reference, wrong claim, or misleading statement
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: What does the repo say?
+      description: Quote the claim and link the file.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say, and what is your source?
+      description: Give the corrected wording and cite the official source (NIST, ISO, EUR-Lex, etc.).
+    validations:
+      required: true

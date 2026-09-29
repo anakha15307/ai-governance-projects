@@ -1,0 +1,7 @@
+# Development dependencies: only what the test suite needs.
+# The repo's demos themselves are standard library only.
+pytest
+
+# Note: numpy and the laya package are needed only to run the
+# laya-governance-experiments analysis (tests/test_demos.py skips that
+# test when they are not installed).

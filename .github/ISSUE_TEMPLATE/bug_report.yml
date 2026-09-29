@@ -1,0 +1,24 @@
+name: Bug report
+description: Report something broken or wrong in the repo
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: Describe the problem and where you found it (file and line if you can).
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can it be reproduced?
+      description: Commands you ran and what happened instead of what you expected.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Python version and OS, if relevant.
