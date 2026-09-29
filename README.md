@@ -209,7 +209,6 @@ tools is part of what I'm learning to govern.
 ## Docs
 
 - [`docs/controlled-real-model-evaluation.md`](docs/controlled-real-model-evaluation.md): environment, prompts, risks, cost assumptions, and results from the Laya real-model evaluation.
-- [`docs/peer-review.md`](docs/peer-review.md): transparent peer-review request and evidence log; no review is claimed until completed.
 
 - [`docs/framework-crosswalk.md`](docs/framework-crosswalk.md): how projects map to NIST AI RMF, ISO/IEC 42001, and the EU AI Act, with the exact evidence each project produces.
 - [`docs/end-to-end-demo.md`](docs/end-to-end-demo.md): one walkthrough from AI intake through risk assessment, approval, monitoring, and incident response, using this repo's own tooling. The lifecycle diagram is at [`docs/figures/architecture.png`](docs/figures/architecture.png).
