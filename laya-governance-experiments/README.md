@@ -50,6 +50,11 @@ All 9 missed attacks were roleplay/hypothetical framing. Direct instruction
 overrides were caught every time. See `report.md` for the full tables, the
 false-negative analysis, and the reliability bins.
 
+![Safety gate metrics vs keyword baseline, with 95% Wilson confidence intervals](../docs/figures/laya-metrics-vs-baseline.png)
+
+Supporting docs: [model card](./MODEL_CARD.md), [data card](./DATA_CARD.md),
+[threat model](./THREAT_MODEL.md), [risk register](./RISK_REGISTER.md).
+
 ## Risks and controls
 
 - Small samples (60 prompts, 6 pairs): findings are exploratory, labeled as

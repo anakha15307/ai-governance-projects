@@ -1,7 +1,8 @@
 # Khanmigo: Governance Risk Assessment
 
-An audit-ready, pre-adoption risk assessment of **Khanmigo** (Khan Academy's
-AI tutor and teaching assistant) as an educational AI use case, with EU AI
+A pre-adoption risk assessment of **Khanmigo** (Khan Academy's
+AI tutor and teaching assistant), written in the structure an auditor would
+expect to see as an educational AI use case, with EU AI
 Act tier classification, NIST AI RMF mapping, a risk register, controls with
 owners, and a monitoring plan. All claims are drawn from public sources
 (cited in [SOURCES.md](./SOURCES.md)); the assessment is illustrative and

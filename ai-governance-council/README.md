@@ -10,6 +10,12 @@ confidence-weighted tie-breaker.
 The full analysis, including a reliability story about free-tier API
 flakiness mattering more than model quality, is in [FINDINGS.md](./FINDINGS.md).
 
+![Accuracy per seat](../docs/figures/council-accuracy.png)
+![Deliberation outcomes](../docs/figures/council-deliberation.png)
+
+Supporting docs: [model card](./MODEL_CARD.md), [data card](./DATA_CARD.md),
+[threat model](./THREAT_MODEL.md), [risk register](./RISK_REGISTER.md).
+
 ## Contents
 
 | File | What it is |

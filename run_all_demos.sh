@@ -1,5 +1,5 @@
 #!/bin/bash
-# Runs the demo for each of the six AI governance projects.
+# Runs the demo for each of the offline AI governance projects (01-07).
 set -u
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
@@ -21,3 +21,6 @@ echo "=== 05 model-registry ==="
 echo
 echo "=== 06 governance-dashboard ==="
 (cd governance-dashboard && python3 build.py && echo "dashboard.html generated")
+
+echo "=== 07 ai-use-case-intake ==="
+(cd ai-use-case-intake && python3 triage.py --demo)

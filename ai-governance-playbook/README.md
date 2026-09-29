@@ -16,7 +16,7 @@ available to analysts is one of two things: high-level frameworks (NIST AI RMF,
 ISO/IEC 42001) that say *what* to do but not *how*, or vendor whitepapers that
 sell a platform. An analyst handed responsibility for AI governance typically
 gets neither a charter, nor an intake process, nor a single template, and is
-expected to produce audit-ready work anyway. This playbook is the missing
+expected to produce well-documented work anyway. This playbook is the missing
 middle: the procedures, artifacts, and cadence that turn framework principles
 into a running program.
 

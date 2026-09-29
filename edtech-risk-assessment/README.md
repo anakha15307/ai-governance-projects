@@ -1,6 +1,7 @@
 # Educational-AI Risk Assessment
 
-A full, audit-ready risk assessment of a fictional AI tutoring assistant, 
+A full risk assessment of a fictional AI tutoring assistant, written in the
+structure an auditor would expect to see,
 with EU AI Act tier classification, NIST AI RMF function mapping, a risk
 register, controls, residual risk, and a monitoring plan. All names,
 organizations, and figures are fictional; the EU AI Act analysis is an
