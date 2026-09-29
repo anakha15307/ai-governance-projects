@@ -3,6 +3,8 @@
 [![CI](https://github.com/anakha15307/ai-governance-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/anakha15307/ai-governance-projects/actions)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 
+**[v1.1 release notes](https://github.com/anakha15307/ai-governance-projects/releases/tag/v1.1)**
+
 I'm Anu, a teacher with seven years in education, training, and assessment.
 I started building independent AI governance projects in May 2026, and earned
 the IAPP AI Governance Professional (AIGP) certification in 2026. Everything
@@ -65,6 +67,8 @@ exact model hash, package versions, and reproduction commands. The report
 states plainly that none of this is evidence of production readiness.
 
 ![Laya metrics vs baseline](docs/figures/laya-metrics-vs-baseline.png)
+
+![Laya analysis replay: real terminal output of `python3 analyze.py`](docs/figures/laya-demo.gif)
 
 Full write-up: [`laya-governance-experiments/report.md`](laya-governance-experiments/report.md),
 plus a [model card](laya-governance-experiments/MODEL_CARD.md),

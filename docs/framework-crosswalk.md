@@ -5,6 +5,12 @@ use most: the NIST AI Risk Management Framework, ISO/IEC 42001, and the EU
 AI Act. I only map what each project genuinely covers. Nothing here is a
 certification claim.
 
+**Versions covered (as of September 2026).** NIST AI RMF 1.0 (published
+January 2023), ISO/IEC 42001:2023 (published December 2023), and Regulation
+(EU) 2024/1689, the EU AI Act (entered into force August 1, 2024, with
+obligations applying in phases through 2027). Full citations and links are in
+[`docs/references.md`](docs/references.md).
+
 ## NIST AI RMF 1.0
 
 The RMF organizes risk management into four functions: Govern, Map, Measure,

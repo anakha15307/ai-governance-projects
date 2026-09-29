@@ -7,6 +7,12 @@ obligations checklist.
 
 Python 3.12, standard library only, fully offline, no API keys.
 
+**Regulatory version.** This classifier follows Regulation (EU) 2024/1689, the
+EU AI Act, as published in the Official Journal in July 2024 (entered into
+force August 1, 2024; obligations apply in phases through 2027). It is an
+educational simplification of the Act's risk tiers, not legal advice. Check
+the current consolidated text before relying on any tier assignment.
+
 ## Why governance teams care
 
 Risk-tiering is the first question in any AI governance workflow: it decides

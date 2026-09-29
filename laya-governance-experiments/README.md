@@ -79,6 +79,10 @@ results with the standard library only:
 cd laya-governance-experiments && python3 analyze.py
 ```
 
+What that looks like, with real terminal output:
+
+![Laya analysis replay: real terminal output of `python3 analyze.py`](../docs/figures/laya-demo.gif)
+
 To re-run the experiments against the model (downloads ~843 MB weights):
 
 ```bash
