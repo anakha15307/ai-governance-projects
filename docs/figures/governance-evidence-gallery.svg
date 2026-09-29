@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="60" y="68" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">AI governance evidence gallery</text>
+  <text x="60" y="104" font-family="Arial,sans-serif" font-size="18" fill="#475569">Generated artifacts from the four priority demos — illustrative, offline, and reproducible.</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="60" y="145" width="510" height="220" rx="16" fill="#0f172a"/>
+    <text x="88" y="185" font-size="24" font-weight="700" fill="#e2e8f0">01 · Governance dashboard</text>
+    <rect x="88" y="210" width="454" height="105" rx="8" fill="#1e293b"/>
+    <text x="110" y="242" font-size="18" fill="#93c5fd">OPEN RISKS</text><text x="110" y="280" font-size="40" font-weight="700" fill="#f8fafc">4</text>
+    <text x="225" y="242" font-size="18" fill="#86efac">CONTROLS</text><text x="225" y="280" font-size="40" font-weight="700" fill="#f8fafc">12</text>
+    <text x="365" y="242" font-size="18" fill="#fcd34d">OVERDUE</text><text x="365" y="280" font-size="40" font-weight="700" fill="#f8fafc">2</text>
+    <text x="88" y="344" font-size="15" fill="#cbd5e1">risk_register.json → dashboard.html</text>
+    <rect x="630" y="145" width="510" height="220" rx="16" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="658" y="185" font-size="24" font-weight="700" fill="#164e63">02 · Model registry</text>
+    <text x="658" y="230" font-size="18" fill="#155e75">cv-screener · v1.2</text><text x="658" y="260" font-size="18" fill="#155e75">status: APPROVED</text>
+    <path d="M675 300 H1080" stroke="#0891b2" stroke-width="4"/><circle cx="700" cy="300" r="12" fill="#0e7490"/><circle cx="850" cy="300" r="12" fill="#0e7490"/><circle cx="1000" cy="300" r="12" fill="#0e7490"/>
+    <text x="658" y="344" font-size="15" fill="#155e75">lineage → evaluation → approval</text>
+    <rect x="60" y="405" width="510" height="220" rx="16" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="88" y="445" font-size="24" font-weight="700" fill="#7c2d12">03 · EU AI Act classifier</text>
+    <text x="88" y="495" font-size="30" font-weight="700" fill="#c2410c">HIGH-RISK</text>
+    <text x="88" y="535" font-size="17" fill="#7c2d12">HireLens CV Screener</text><text x="88" y="568" font-size="16" fill="#9a3412">matched: employment · human oversight</text><text x="88" y="600" font-size="15" fill="#9a3412">educational simplification; not legal advice</text>
+    <rect x="630" y="405" width="510" height="220" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="658" y="445" font-size="24" font-weight="700" fill="#14532d">04 · Laya evaluation</text>
+    <text x="658" y="500" font-size="22" fill="#166534">Safety gate</text><text x="930" y="500" font-size="28" font-weight="700" fill="#15803d">85%</text>
+    <text x="658" y="540" font-size="22" fill="#166534">Recall</text><text x="930" y="540" font-size="28" font-weight="700" fill="#b45309">70%</text>
+    <text x="658" y="580" font-size="16" fill="#166534">60 prompts · CPU · Laya 0.3.20</text><text x="658" y="608" font-size="15" fill="#166534">exploratory; no production claim</text>
+  </g>
+</svg>

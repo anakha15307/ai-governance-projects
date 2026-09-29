@@ -31,6 +31,26 @@ If you are reviewing this repo, follow this order:
    before quoting any number: it says exactly what each result can and
    cannot support.
 
+### Evidence gallery and workflow walkthrough
+
+The four evidence panels below are lightweight, repository-native previews of
+the generated artifacts. Open the linked artifact or run the command beside it
+to reproduce the output locally.
+
+![Governance evidence gallery](docs/figures/governance-evidence-gallery.svg)
+
+| Evidence | Reproduce |
+|---|---|
+| [Governance dashboard](governance-dashboard/dashboard.html) | `cd governance-dashboard && python3 build.py --demo` |
+| [Model registry lineage report](model-registry/lineage-report.html) | `cd model-registry && python3 seed.py --reset` |
+| [EU AI Act classifier output](eu-ai-act-risk-classifier/examples/sample_output.txt) | `cd eu-ai-act-risk-classifier && python3 classify.py --demo` |
+| [Laya experiment report](laya-governance-experiments/report.md) | `cd laya-governance-experiments && python3 analyze.py` |
+
+For a short, self-contained walkthrough of the complete lifecycle, open
+[`docs/workflow-walkthrough.html`](docs/workflow-walkthrough.html) in a browser
+or read the command-by-command version in
+[`docs/end-to-end-demo.md`](docs/end-to-end-demo.md).
+
 ## How to read this repo
 
 **Project types.** Each project is one of:
@@ -187,6 +207,9 @@ playbook templates), its README says so. I keep it this way because using the
 tools is part of what I'm learning to govern.
 
 ## Docs
+
+- [`docs/controlled-real-model-evaluation.md`](docs/controlled-real-model-evaluation.md): environment, prompts, risks, cost assumptions, and results from the Laya real-model evaluation.
+- [`docs/peer-review.md`](docs/peer-review.md): transparent peer-review request and evidence log; no review is claimed until completed.
 
 - [`docs/framework-crosswalk.md`](docs/framework-crosswalk.md): how projects map to NIST AI RMF, ISO/IEC 42001, and the EU AI Act, with the exact evidence each project produces.
 - [`docs/end-to-end-demo.md`](docs/end-to-end-demo.md): one walkthrough from AI intake through risk assessment, approval, monitoring, and incident response, using this repo's own tooling. The lifecycle diagram is at [`docs/figures/architecture.png`](docs/figures/architecture.png).
